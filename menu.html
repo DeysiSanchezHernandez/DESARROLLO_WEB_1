@@ -10,43 +10,45 @@
 
 <body>
 
-    <header class="header sticky-top py-2">
-        <div class="container">
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2">
+            <a href="index.html" class="navbar-brand brand-link">
+                <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="brand-logo">
+                <span class="brand-name">
+                    <span class="logo-title">POLLERÍA</span>
+                    <span class="logo-subtitle">LA CABAÑITA</span>
+                </span>
+            </a>
             
-            <nav class="navbar navbar-expand-lg navbar-dark p-0 d-flex justify-content-between align-items-center flex-wrap">
-                
-                <a href="principal.html" class="navbar-brand d-flex align-items-center text-decoration-none m-0">
-                    <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="me-2" height="50">
-                    <div class="d-flex flex-column">
-                        <span class="logo-title fw-bold" style="color: #ED1C24 !important;">POLLERÍA</span>
-                        <span class="text-white d-block small">LA CABAÑITA</span>
-                    </div>
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
-                    <ul class="navbar-nav ms-auto text-end pt-3 pt-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="principal.html">Inicio</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <aside class="offcanvas-lg offcanvas-end bg-black text-white ms-lg-auto" tabindex="-1" id="menuPrincipal" data-bs-backdrop="false" data-bs-scroll="true" style="--bs-offcanvas-width: 260px;">
+                <header class="offcanvas-header">
+                    <h2 class="offcanvas-title h5 title-red">La Cabañita</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
+                </header>
+
+                <section class="offcanvas-body justify-content-end">
+                    <ul class="navbar-nav ms-lg-auto text-center text-lg-end">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link active" href="menu.html">Menú</a></li>
                         <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link nav-cart" href="carrito.html">Carrito</a></li>
                     </ul>
-                </div>
+                </section>
+            </aside>
+        </nav>
 
-            </nav>
-        </div>
-
-        <nav class="container d-flex justify-content-start justify-content-lg-center gap-2 overflow-x-auto py-2 mt-2 border-top border-secondary text-nowrap" style="scrollbar-width: none;">
+        <nav class="container menu-tabs d-flex justify-content-star justify-content-lg-center py-2 border-top border-secondary text-nowrap" aria-label="Categorías del menú">
             <a href="#pollos" class="btn btn-outline-danger btn-sm rounded-pill px-3">POLLOS</a>
             <a href="#parrillas" class="btn btn-outline-danger btn-sm rounded-pill px-3">PARRILLAS</a>
             <a href="#papas" class="btn btn-outline-danger btn-sm rounded-pill px-3">PAPAS</a>
             <a href="#ensaladas" class="btn btn-outline-danger btn-sm rounded-pill px-3">ENSALADAS</a>
             <a href="#bebidas" class="btn btn-outline-danger btn-sm rounded-pill px-3">BEBIDAS</a>
             <a href="#cremas" class="btn btn-outline-danger btn-sm rounded-pill px-3">CREMAS</a>
-            <a href="carrito.html" class="btn btn-warning btn-sm rounded-pill px-3 fw-bold">CARRITO</a>
         </nav>
     </header>
 
