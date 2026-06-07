@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pollería La Cabañita Bagua - El mejor pollo a la brasa</title>
+    <title>Pollería La Cabañita Bagua | Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
@@ -22,31 +22,39 @@
 </head>
 <body>
 
-    <header class="header sticky-top py-2">
+    <header class="header sticky-top">
         <div class="container">
             
-            <nav class="navbar navbar-expand-lg navbar-dark p-0 d-flex justify-content-between align-items-center flex-wrap">
-                
-                <a href="principal.html" class="navbar-brand d-flex align-items-center text-decoration-none m-0">
-                    <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="me-2" height="50">
-                    <div class="d-flex flex-column">
-                        <span class="logo-title fw-bold" style="color: #ED1C24 !important;">POLLERÍA</span>
-                        <span class="text-white d-block small">LA CABAÑITA</span>
-                    </div>
+            <nav class="navbar navbar-expand-lg navbar-dark container py-2">
+                    <a href="index.html" class="navbar-brand brand-link">
+
+                    <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="brand-logo">
+                    <span class="brand-name">
+                    <span class="logo-title">POLLERÍA</span>
+                    <span class="logo-subtitle">LA CABAÑITA</span>
+                </span>
                 </a>
                 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
-                <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
-                    <ul class="navbar-nav ms-auto text-end pt-3 pt-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="principal.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-                    </ul>
-                </div>
+                <aside class="offcanvas-lg offcanvas-end bg-black text-white ms-lg-auto" tabindex="-1" id="menuPrincipal" data-bs-backdrop="false" data-bs-scroll="true" style="--bs-offcanvas-width: 260px;">
+                <header class="offcanvas-header">
+                <h2 class="offcanvas-title h5 title-red">La Cabañita</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
+                </header>
+
+                <section class="offcanvas-body justify-content-end">
+                <ul class="navbar-nav ms-lg-auto text-center text-lg-end">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                <li class="nav-item"><a class="nav-link nav-cart" href="carrito.html">Carrito</a></li>
+                </ul>
+                </section>
+        </aside>
 
             </nav>
         </div>
