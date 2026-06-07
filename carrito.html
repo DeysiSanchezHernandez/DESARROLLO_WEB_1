@@ -58,26 +58,31 @@
                 </article>
             </section>
 
-            <section class="col-lg-4">
-                <div class="card p-4 bg-light shadow-sm">
-                    <h2 class="h5 mb-4 border-bottom pb-2"style="color: #ED1C24 !important;">Resumen de la Orden</h2>
-                    <div class="d-flex justify-content-between mb-2">
-                        <span class="text-light opacity-75">Subtotal</span>
-                        <span class="text-light opacity-75">S/ 55.00</span>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-light opacity-75">Envío (Delivery)</span>
-                        <span class="text-light opacity-75">S/ 5.00</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between align-items-center my-3">
-                        <span class="fw-bold fs-5 text-light opacity-75">Total a pagar</span>
-                        <span class="fw-bold fs-4 title-red">S/ 60.00</span>
-                    </div>
-                    <button class="btn btn-cabanita w-100 btn-lg mt-2">Continuar con el Pago</button>
-                </div>
-            </section>
-        </div>
+            <aside class="col-12 col-lg-4">
+                <section class="card cart-summary p-4 shadow-sm">
+                    <h2 class="h5 title-red mb-4 border-bottom border-secondary pb-2">Resumen de la Orden</h2>
+
+                    <section class="summary-row">
+                        <span>Subtotal</span>
+                        <span>S/ 32.00</span>
+                    </section>
+
+                    <section class="summary-row">
+                        <span>Envío</span>
+                        <span>S/ 2.00</span>
+                    </section>
+
+                    <hr class="border-secondary">
+
+                    <section class="summary-row total-row">
+                        <span>Total a pagar</span>
+                        <span class="title-red">S/ 34.00</span>
+                    </section>
+
+                    <button class="btn btn-cabanita w-100 btn-lg mt-3" type="button">Continuar con el Pago</button>
+                </section>
+            </aside>
+        </section>
     </main>
 
     <footer class="footer py-5 mt-auto text-white-50" style="background-color: #111111;">
