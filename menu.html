@@ -52,75 +52,84 @@
         </nav>
     </header>
 
-    <main class="container my-5">
-        <header class="text-center mb-5 d">
-            <h1 class="display-4 title-red">Nuestro Menú Tradicional</h1>
-            <p class="lead text-light opacity-75">El verdadero sabor de la brasa directo a tu mesa</p>
-        </header>
-
-        <section id="pollos" class="row g-4 mb-5">
-            <h2 class="h3 title-red border-bottom border-secondary pb-2">| POLLOS A LA BRASA</h2>
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./imagenes/POLLOALABRASAENTERO.png" class="card-img-top" alt="Pollo a la brasa">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <header>
-                            <h3 class="h5 card-title" style="color: #000000 !important;">Pollo a la Brasa Entero</h3>
-                            <p class="card-text text-muted">Acompañado de crujientes papas fritas, ensalada fresca y todas nuestras cremas caseras.</p>
-                        </header>
-                        <footer class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">S/ 58.00</span>
-                            <button class="btn btn-cabanita">Agregar 🛒</button>
-                        </footer>
-                    </div>
-                </div>
-            </article>
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./imagenes/POLLOALABRASAMEDIO.png" class="card-img-top" alt="Pollo a la brasa">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <header>
-                            <h3 class="h5 card-title" style="color: #000000 !important;">1/2 de Pollo a la Brasa</h3>
-                            <p class="card-text text-muted">Acompañado de crujientes papas fritas, ensalada fresca y todas nuestras cremas caseras.</p>
-                        </header>
-                        <footer class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">S/ 30.00</span>
-                            <button class="btn btn-cabanita">Agregar 🛒</button>
-                        </footer>
-                    </div>
-                </div>
-            </article>
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./imagenes/POLLOALABRASACUARTO.png" class="card-img-top" alt="Pollo a la brasa">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <header>
-                            <h3 class="h5 card-title" style="color: #000000 !important;">1/4 de Pollo a la Brasa</h3>
-                            <p class="card-text text-muted">Acompañado de crujientes papas fritas, ensalada fresca y todas nuestras cremas caseras.</p>
-                        </header>
-                        <footer class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">S/ 16.00</span>
-                            <button class="btn btn-cabanita">Agregar 🛒</button>
-                        </footer>
-                    </div>
-                </div>
-            </article>
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./imagenes/POLLOALABRASAOCTAVO.png" class="card-img-top" alt="Pollo a la brasa">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <header>
-                            <h3 class="h5 card-title" style="color: #000000 !important;">1/8 de Pollo a la Brasa</h3>
-                            <p class="card-text text-muted">Acompañado de crujientes papas fritas, ensalada fresca y todas nuestras cremas caseras.</p>
-                        </header>
-                        <footer class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                            <button class="btn btn-cabanita">Agregar 🛒</button>
-                        </footer>
-                    </div>
-                </div>
-            </article>
+    <main>
+        <section class="hero hero-menu text-center text-white">
+            <section class="container">
+                <h1 class="display-4 fw-bold title-red">Nuestro Menú Tradicional</h1>
+                <p class="lead text-light opacity-75">El verdadero sabor de la brasa directo a tu mesa.</p>
+            </section>
         </section>
+
+        <section class="container section-space">
+            <section id="pollos" class="row g-4 menu-category">
+                <header class="col-12">
+                    <h2 class="h3 title-red menu-category-title">| POLLOS A LA BRASA</h2>
+                </header>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="card product-card h-100 shadow-sm">
+                        <img src="./imagenes/POLLOALABRASAENTERO.png" class="card-img-top img-fluid" alt="Pollo a la brasa entero">
+                        <section class="card-body d-flex flex-column justify-content-between">
+                            <header>
+                                <h3 class="h5 card-title fw-bold">Pollo a la Brasa Entero</h3>
+                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
+                            </header>
+                            <footer class="card-footer-action">
+                                <span class="fs-4 fw-bold text-dark">S/ 58.00</span>
+                                <button class="btn btn-cabanita">Agregar 🛒</button>
+                            </footer>
+                        </section>
+                    </section>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="card product-card h-100 shadow-sm">
+                        <img src="./imagenes/POLLOALABRASAMEDIO.png" class="card-img-top img-fluid" alt="Medio pollo a la brasa">
+                        <section class="card-body d-flex flex-column justify-content-between">
+                            <header>
+                                <h3 class="h5 card-title fw-bold">1/2 de Pollo a la Brasa</h3>
+                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
+                            </header>
+                            <footer class="card-footer-action">
+                                <span class="fs-4 fw-bold text-dark">S/ 30.00</span>
+                                <button class="btn btn-cabanita">Agregar 🛒</button>
+                            </footer>
+                        </section>
+                    </section>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="card product-card h-100 shadow-sm">
+                        <img src="./imagenes/POLLOALABRASACUARTO.png" class="card-img-top img-fluid" alt="Cuarto de pollo a la brasa">
+                        <section class="card-body d-flex flex-column justify-content-between">
+                            <header>
+                                <h3 class="h5 card-title fw-bold">1/4 de Pollo a la Brasa</h3>
+                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
+                            </header>
+                            <footer class="card-footer-action">
+                                <span class="fs-4 fw-bold text-dark">S/ 16.00</span>
+                                <button class="btn btn-cabanita">Agregar 🛒</button>
+                            </footer>
+                        </section>
+                    </section>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="card product-card h-100 shadow-sm">
+                        <img src="./imagenes/POLLOALABRASAOCTAVO.png" class="card-img-top img-fluid" alt="Octavo de pollo a la brasa">
+                        <section class="card-body d-flex flex-column justify-content-between">
+                            <header>
+                                <h3 class="h5 card-title fw-bold">1/8 de Pollo a la Brasa</h3>
+                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
+                            </header>
+                            <footer class="card-footer-action">
+                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
+                                <button class="btn btn-cabanita">Agregar 🛒</button>
+                            </footer>
+                        </section>
+                    </section>
+                </article>
+            </section>
 
         <section id="parrillas" class="row g-4 mb-5">
             <h2 class="h3 title-red border-bottom border-secondary pb-2">| PARRILLAS</h2>
