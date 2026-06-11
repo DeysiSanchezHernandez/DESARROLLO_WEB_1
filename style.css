@@ -11,19 +11,13 @@
   --fuente-principal: 'Chau Philomene One', sans-serif;
 }
 
-* { 
-    font-family: var(--fuente-principal) !important;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; 
-    scroll-padding-top: 140px; 
-}
-.header {
-  background-color: var(--negro-principal);
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
-  z-index: 1030;
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
 }
 
 body {
@@ -32,14 +26,21 @@ body {
   font-family: var(--fuente-principal);
   background-color: var(--negro-principal);
   color: var(--blanco);
-}        
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
+
 a {
   text-decoration: none;
+}
+
+.header {
+  background-color: var(--negro-principal);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
+  z-index: 1030;
 }
 
 .brand-link {
@@ -53,6 +54,7 @@ a {
   width: auto;
   object-fit: contain;
 }
+
 .brand-name {
   display: flex;
   flex-direction: column;
@@ -92,6 +94,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .hero-home {
   min-height: 70vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('./imagenes/FONDOINDEX.png');
@@ -124,6 +127,7 @@ a {
 .section-dark {
   background-color: var(--negro-suave);
 }
+
 .btn-cabanita {
   background-color: var(--rojo-cabanita) !important;
   color: var(--blanco) !important;
@@ -203,8 +207,6 @@ a {
   background-color: var(--vino);
   color: var(--blanco);
 }
-
-
 
 .icon-circle,
 .info-icon {
@@ -509,154 +511,4 @@ a {
 
 .mobile-carousel .carousel-control-next {
   right: calc(50% - 4rem);
-} 
-
-
-
-
-h1, h2, h3, h4, h5, h6, .display-5 {
-    color: #ffffff !important;
-}
-
-.bg-light {
-    background-color: #000000 !important; 
-}
-
-figure.card {
-    background-color: #ffffff !important; 
-    border: none !important;
-}
-
-figure.card h3,
-figure.card .card-text,
-figure.card .text-muted {
-    color: #1a1a1a !important; 
-}
-
-blockquote.card {
-    background-color: #460D0D !important; 
-}
-
-blockquote.card .card-text {
-    color: #ECECEC !important;
-    font-style: italic;
-}
-
-blockquote.card .blockquote-footer {
-    color: #ED1C24!important; 
-}
-blockquote.card .blockquote-footer small {
-    color: #836262 !important; 
-}
-
-.title-red {
-    color: var(--rojo-cabanita) !important;
-}
-
-.nav-link {
-    color: var(--oscuro-principal) !important;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--rojo-cabanita) !important;
-}
-
-.btn-cabanita {
-    background-color: var(--rojo-cabanita) !important;
-    color: var(--blanco-puro) !important;
-    border: none !important;
-    padding: 10px 24px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-cabanita:hover {
-    background-color: var(--rojo-oscuro) !important;
-    color: var(--blanco-puro) !important;
-}
-
-.accordion-button {
-    color: var(--oscuro-principal) !important;
-    background-color: var(--blanco-puro) !important;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: rgba(134, 220, 53, 0.1) !important; 
-    color: var(--rojo-cabanita) !important;
-    box-shadow: none !important;
-}
-
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important; 
-}
-
-.card-icon-container, .beneficios-icon-circle, .info-icon {
-    font-size: 2rem;
-    background-color: rgba(220, 53, 69, 0.1) !important;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.value-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px dashed #ccc;
-}
-
-.value-dot {
-    flex-grow: 1;
-    border-bottom: 2px dotted #cccccc;
-    margin: 0 15px;
-}
-
-.footer {
-    background-color: var(--oscuro-principal) !important;
-}
-
-.f-logo-title {
-    color: var(--rojo-cabanita) !important;
-}
-
-.social-icon-circle {
-    width: 40px;
-    height: 40px;
-    background-color: #333 !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 10px;
-    transition: background-color 0.3s;
-}
-
-.social-icon-circle svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--blanco-puro) !important;
-}
-
-.hero-nosotros {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./imagenes/FONDOINDEX.png'); 
-    background-size: cover;     
-    background-position: center;  
-    background-repeat: no-repeat;  
-    width: 100%;                   
-    padding: 0 !important;      
-}
-
-header.text-center.mb-5.d{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./imagenes/FONDOMENÚ.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
