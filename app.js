@@ -82,6 +82,39 @@ let embaces = calcularEmbaces();
 let total = subtotal + embaces;
 
 let vuelto = dinero - total;
+
+let msg = *NUEVO PEDIDO*\n\n;
+
+msg += *Nombre:* ${nombre}\n;
+msg += *Telefono:* ${telefono}\n;
+
+if (entrega === "delivery") {
+    msg += *Direccion:* ${direccion}\n;
+    msg += *Referencia:* ${referencia}\n;
+} else {
+    msg += *Tipo:* RECOJO EN LOCAL\n;
+}
+
+msg += \n*Metodo de pago:* ${pago}\n;
+msg += *Observaciones:* ${detalles}\n\n;
+
+msg += *TOTAL:* S/ ${total.toFixed(2)}\n\n;
+
+if (pago === "efectivo") {
+
+    msg += *Dinero recibido:* S/ ${dinero.toFixed(2)}\n;
+    msg += *Vuelto:* S/ ${vuelto.toFixed(2)}\n\n;
+
+} else {
+
+    msg += *IMPORTANTE:* No olvidar enviar captura de pago para confirmar el pedido\n\n;
+}
+
+msg += *DETALLE DEL PEDIDO:*\n;
+
+carrito.forEach(p => {
+    msg += - ${p.nombre} x${p.cantidad}\n;
+});
 }
 
 
