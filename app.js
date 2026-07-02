@@ -6,7 +6,14 @@ function guardar() {
     actualizarContador();
 }
 
-document.addEventListener("DOMContentLoaded", actualizarContador);
+/* ===============================
+   INIT
+=============================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderCarrito();
+    actualizarContador();
+});
 
 /* ===============================
    AGREGAR PRODUCTOS
