@@ -115,12 +115,17 @@ msg += *DETALLE DEL PEDIDO:*\n;
 carrito.forEach(p => {
     msg += - ${p.nombre} x${p.cantidad}\n;
 });
+
+window.open(
+    "https://wa.me/51930838877?text=" + encodeURIComponent(msg),
+    "_blank"
+);
 }
 
 
 
 /* ===============================
-   INIT
+    INIT
 =============================== */
 
 document.addEventListener("DOMContentLoaded", () => {
