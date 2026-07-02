@@ -40,4 +40,11 @@ document.addEventListener("click", (e) => {
     }
 
     guardar();
+    function actualizarContador() {
+    const badge = document.getElementById("cartCount");
+    if (!badge) return;
+
+    const totalItems = carrito.reduce((total, p) => total + p.cantidad, 0);
+    badge.innerText = totalItems;
+}
 });
