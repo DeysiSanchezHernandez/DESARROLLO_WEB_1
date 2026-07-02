@@ -66,7 +66,19 @@ function enviarPedido() {
         alert("El carrito está vacío");
         return;
     }
+
+    let nombre = document.getElementById("nombre").value;
+let telefono = document.getElementById("telefono").value;
+let direccion = document.getElementById("direccion").value;
+let referencia = document.getElementById("referencia").value;
+let entrega = document.getElementById("entrega").value;
+let pago = document.getElementById("pago").value;
+let detalles = document.getElementById("detalles").value;
+
+let dinero = parseFloat(document.getElementById("monto")?.value) || 0;
 }
+
+
 
 /* ===============================
    INIT
