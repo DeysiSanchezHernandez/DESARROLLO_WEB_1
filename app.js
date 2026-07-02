@@ -76,6 +76,12 @@ let pago = document.getElementById("pago").value;
 let detalles = document.getElementById("detalles").value;
 
 let dinero = parseFloat(document.getElementById("monto")?.value) || 0;
+
+let subtotal = carrito.reduce((a, b) => a + b.precio * b.cantidad, 0);
+let embaces = calcularEmbaces();
+let total = subtotal + embaces;
+
+let vuelto = dinero - total;
 }
 
 
