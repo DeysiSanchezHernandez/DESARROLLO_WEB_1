@@ -47,6 +47,28 @@ document.addEventListener("change", (e) => {
 });
 
 /* ===============================
+    ENVIAR WHATSAPP (FORMATO LIMPIO)
+=============================== */
+
+function enviarPedido() {
+
+    let campos = ["nombre", "telefono", "entrega", "pago"];
+
+    for (let id of campos) {
+        let el = document.getElementById(id);
+        if (!el || el.value.trim() === "") {
+            alert("Completa todos los campos obligatorios");
+            return;
+        }
+    }
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío");
+        return;
+    }
+}
+
+/* ===============================
    INIT
 =============================== */
 
