@@ -56,7 +56,6 @@ document.addEventListener("click", (e) => {
 /* ===============================
    RENDER CARRITO
 =============================== */
-
 function renderCarrito() {
 
     const cont = document.getElementById("cartItems");
@@ -65,13 +64,32 @@ function renderCarrito() {
     let html = "";
     let subtotal = 0;
 
-    carrito.forEach((p) => {
+    carrito.forEach((p, i) => {
+
         subtotal += p.precio * p.cantidad;
 
         html += `
-        <div class="card p-3 mb-3">
-            <strong>${p.nombre}</strong><br>
-            S/ ${p.precio} x ${p.cantidad}
+        <div class="card p-3 mb-3 d-flex flex-row align-items-center gap-3">
+
+            <img src="${p.img}" style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+
+            <div class="flex-grow-1">
+
+                <strong>${p.nombre}</strong><br>
+
+                <small style="opacity:.7">${p.descripcion}</small><br>
+
+                S/ ${p.precio}
+
+                <div class="mt-2">
+                    <button onclick="menos(${i})">-</button>
+                    ${p.cantidad}
+                    <button onclick="mas(${i})">+</button>
+                    <button onclick="eliminar(${i})">🗑️</button>
+                </div>
+
+            </div>
+
         </div>
         `;
     });
@@ -80,6 +98,7 @@ function renderCarrito() {
 
     actualizarTotal(subtotal);
 }
+
 
 function actualizarTotal(subtotal) {
     const cont = document.getElementById("resumenTotal");
