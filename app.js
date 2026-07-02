@@ -5,6 +5,46 @@ function guardar() {
     renderCarrito();
     actualizarContador();
 }
+/* ===============================
+    MÉTODO DE PAGO (MENSAJES FIX)
+=============================== */
+
+document.addEventListener("change", (e) => {
+
+    if (e.target.id !== "pago") return;
+
+    const info = document.getElementById("infoPago");
+    const monto = document.getElementById("monto");
+
+    let val = e.target.value;
+
+    if (!info) return;
+
+    if (val === "yape") {
+        info.innerText = "Yape: 999 888 777 - Juan Pérez";
+        monto.classList.add("d-none");
+    }
+
+    else if (val === "plin") {
+        info.innerText = "Plin: 999 888 777 - Juan Pérez";
+        monto.classList.add("d-none");
+    }
+
+    else if (val === "tarjeta") {
+        info.innerText = "Tarjeta Visa/Mastercard - pago al recibir";
+        monto.classList.add("d-none");
+    }
+
+    else if (val === "efectivo") {
+        info.innerText = "Pago en efectivo al recibir";
+        monto.classList.remove("d-none");
+    }
+
+    else {
+        info.innerText = "";
+        monto.classList.add("d-none");
+    }
+});
 
 /* ===============================
    INIT
