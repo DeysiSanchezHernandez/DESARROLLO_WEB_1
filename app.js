@@ -99,6 +99,31 @@ function renderCarrito() {
     actualizarTotal(subtotal);
 }
 
+/* ===============================
+   EMBACES (CORRECTO FINAL)
+=============================== */
+
+function calcularEmbaces() {
+
+    let total = 0;
+
+    carrito.forEach(p => {
+
+        let nombre = p.nombre.toLowerCase();
+
+        // SOLO bebidas embotelladas NO pagan
+        let sinEmbace =
+            nombre.includes("coca") ||
+            nombre.includes("inka") ||
+            nombre.includes("agua");
+
+        if (sinEmbace) return;
+
+        total += 0.5 * p.cantidad;
+    });
+
+    return total;
+}
 
 function actualizarTotal(subtotal) {
     const cont = document.getElementById("resumenTotal");
