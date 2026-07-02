@@ -156,9 +156,22 @@ function eliminar(i) {
     guardar();
 }
 
+function actualizarContador() {
+    const contador = document.getElementById("cartCount");
+
+    if (!contador) return;
+
+    const totalProductos = carrito.reduce((total, producto) => {
+        return total + producto.cantidad;
+    }, 0);
+
+    contador.innerText = totalProductos;
+}
+
 function guardar() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     renderCarrito();
+    actualizarContador();
 }
 
 
@@ -285,4 +298,7 @@ if (pago === "efectivo") {
    INIT
 =============================== */
 
-document.addEventListener("DOMContentLoaded", renderCarrito);
+document.addEventListener("DOMContentLoaded", () => {
+    renderCarrito();
+    actualizarContador();
+});
