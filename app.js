@@ -26,13 +26,18 @@ document.addEventListener("click", (e) => {
 
     let precio = parseFloat(precioTexto.replace(/[^\d.]/g, ""));
 
-    carrito.push({
-        nombre,
-        descripcion,
-        precio,
-        cantidad: 1,
-        img
-    });
+    let existe = carrito.find(p => p.nombre === nombre);
+    if (existe) {
+        existe.cantidad++;
+    } else {
+        carrito.push({
+            nombre,
+            descripcion,
+            precio,
+            cantidad: 1,
+            img
+        });
+    }
 
     guardar();
 });
