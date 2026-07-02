@@ -145,3 +145,23 @@ function actualizarTotal(subtotal) {
         `;
     }
 }
+
+
+/* ===============================
+   CONTROL CARRITO
+=============================== */
+
+function mas(i) {
+    carrito[i].cantidad++;
+    guardar();
+}
+
+function menos(i) {
+    if (carrito[i].cantidad > 1) carrito[i].cantidad--;
+    guardar();
+}
+
+function eliminar(i) {
+    carrito.splice(i, 1);
+    guardar();
+}
