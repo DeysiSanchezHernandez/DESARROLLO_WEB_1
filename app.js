@@ -125,12 +125,23 @@ function calcularEmbaces() {
     return total;
 }
 
+/* ===============================
+   TOTAL
+=============================== */
+
 function actualizarTotal(subtotal) {
+
+    let embaces = calcularEmbaces();
+
+    let total = subtotal + embaces;
+
     const cont = document.getElementById("resumenTotal");
 
     if (cont) {
         cont.innerHTML = `
             <p>Subtotal: S/ ${subtotal.toFixed(2)}</p>
+            <p>Embaces: S/ ${embaces.toFixed(2)}</p>
+            <h3 class="text-danger">Total: S/ ${total.toFixed(2)}</h3>
         `;
     }
 }
