@@ -51,3 +51,42 @@ document.addEventListener("click", (e) => {
     badge.innerText = totalItems;
 }
 });
+
+
+/* ===============================
+   RENDER CARRITO
+=============================== */
+
+function renderCarrito() {
+
+    const cont = document.getElementById("cartItems");
+    if (!cont) return;
+
+    let html = "";
+    let subtotal = 0;
+
+    carrito.forEach((p) => {
+        subtotal += p.precio * p.cantidad;
+
+        html += `
+        <div class="card p-3 mb-3">
+            <strong>${p.nombre}</strong><br>
+            S/ ${p.precio} x ${p.cantidad}
+        </div>
+        `;
+    });
+
+    cont.innerHTML = html;
+
+    actualizarTotal(subtotal);
+}
+
+function actualizarTotal(subtotal) {
+    const cont = document.getElementById("resumenTotal");
+
+    if (cont) {
+        cont.innerHTML = `
+            <p>Subtotal: S/ ${subtotal.toFixed(2)}</p>
+        `;
+    }
+}
