@@ -16,18 +16,22 @@ document.addEventListener("click", (e) => {
     if (!card) return;
 
     const nombre = card.querySelector(".card-title")?.innerText?.trim();
-
+    const descripcion = card.querySelector(".card-text")?.innerText?.trim() || "";
+    const img = card.querySelector("img")?.src || "";
+    
     let precioTexto =
-        card.querySelector(".fs-4")?.innerText ||
-        card.querySelector(".text-dark")?.innerText ||
-        "0";
+    card.querySelector(".fs-4")?.innerText ||
+    card.querySelector(".text-dark")?.innerText ||
+    "0";
 
     let precio = parseFloat(precioTexto.replace(/[^\d.]/g, ""));
 
     carrito.push({
         nombre,
+        descripcion,
         precio,
-        cantidad: 1
+        cantidad: 1,
+        img
     });
 
     guardar();
