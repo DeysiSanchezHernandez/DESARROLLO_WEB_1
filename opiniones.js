@@ -54,3 +54,9 @@ function submitReview(event){ event.preventDefault();
         submitReview
     );
 
+groupReviews()
+
+renderReviews()
+
+createReviewCard()
+
