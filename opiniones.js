@@ -27,3 +27,17 @@ const button=event.target.closest("[data-rating]");
     paintStars();
 
 });
+
+function submitReview(event){ event.preventDefault(); 
+    const name= document.getElementById("nombreOpinion").value.trim();
+    const comment=document.getElementById("comentarioOpinion").value.trim();
+    if(name.length<2 || comment.length<10 || !rating){
+    return;
+    }
+    }
+
+    document.getElementById("formOpinion") ?.addEventListener(
+        "submit",
+        submitReview
+    );
+    
