@@ -34,10 +34,23 @@ function submitReview(event){ event.preventDefault();
     if(name.length<2 || comment.length<10 || !rating){
     return;
     }
+
+    reviews.unshift({
+        nombre: name,
+        comentario: comment,
+        estrellas: rating,
+        fecha: new Date().toLocaleDateString("es-PE"),
+
+        reviews=reviews.slice(0,20);
+        localStorage.setItem(
+        REVIEW_KEY,
+        JSON.stringify(reviews)
+        )
+    });
     }
 
     document.getElementById("formOpinion") ?.addEventListener(
         "submit",
         submitReview
     );
-    
+
