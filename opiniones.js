@@ -60,3 +60,48 @@ renderReviews()
 
 createReviewCard()
 
+
+function updateReviewsAverage() {
+    const numberElement = document.getElementById("promedioNumero");
+
+    const starsElement = document.getElementById("promedioEstrellas");
+
+    const textElement = document.getElementById("promedioTexto");
+
+    if (!numberElement || !starsElement || !textElement) {
+        return;
+    }
+
+    if (!reviews.length) {
+        numberElement.textContent = "0.0";
+        starsElement.textContent = "☆☆☆☆☆";
+        starsElement.setAttribute("aria-label", "Sin calificaciones");
+        textElement.textContent = "Sin calificaciones todavía";
+        return;
+    }
+
+    const totalStars = reviews.reduce((sum, review) => sum + Number(review.estrellas || 0), 0);
+
+    const average = totalStars / reviews.length;
+
+    const roundedAverage = Math.round(average * 10) / 10;
+
+    const fullStars = Math.floor(average);
+
+    const hasHalfStar = average - fullStars >= 0.5;
+
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    numberElement.textContent = roundedAverage.toFixed(1);
+
+    starsElement.innerHTML = [
+        "★".repeat(fullStars),
+        hasHalfStar ? '<span class="half-star" aria-hidden="true">★</span>' : "",
+        "☆".repeat(emptyStars),
+    ].join("");
+
+    starsElement.setAttribute("aria-label", `${roundedAverage.toFixed(1)} de 5 estrellas`);
+
+    textElement.textContent = `${reviews.length} opinión${reviews.length === 1 ? "" : "es"} registrada${reviews.length === 1 ? "" : "s"}`;
+}
+
