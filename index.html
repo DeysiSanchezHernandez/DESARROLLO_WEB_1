@@ -175,6 +175,7 @@
       <button type="button" data-bs-target="#comentariosClientes" data-bs-slide-to="2" aria-label="Comentario 3"></button>
     </section>
 
+
     <section class="carousel-inner">
       <article class="carousel-item active">
         <blockquote class="card testimonial-card mobile-slide-card p-4 border-0 shadow-sm m-0">
@@ -184,7 +185,55 @@
           </footer>
         </blockquote>
       </article>
-
+      <article class="review-form mt-5">
+          <h3>Déjanos tu opinión</h3>
+          <form id="formOpinion" novalidate>
+              <fieldset class="row g-3">
+                  <legend class="visually-hidden">Formulario de opinión</legend>
+                  <label class="col-md-6 form-label" for="nombreOpinion"
+                      >Nombre
+                      <input
+                          class="form-control mt-2"
+                          id="nombreOpinion"
+                          maxlength="50"
+                          required
+                      />
+                  </label>
+                  <fieldset class="col-md-6">
+                      <legend class="form-label">Calificación</legend>
+                      <section
+                          id="selectorEstrellas"
+                          class="star-selector"
+                          role="radiogroup"
+                          aria-label="Calificación"
+                      >
+                          <button type="button" data-rating="1">★</button>
+                          <button type="button" data-rating="2">★</button>
+                          <button type="button" data-rating="3">★</button>
+                          <button type="button" data-rating="4">★</button>
+                          <button type="button" data-rating="5">★</button>
+                      </section>
+                  </fieldset>
+                  <label class="col-12 form-label" for="comentarioOpinion"
+                      >Comentario<textarea
+                          class="form-control mt-2"
+                          id="comentarioOpinion"
+                          rows="4"
+                          minlength="10"
+                          maxlength="300"
+                          required
+                      ></textarea>
+                  </label>
+                  <footer class="col-12">
+                      <button class="btn btn-brand" type="submit">
+                          Publicar opinión
+                      </button>
+                      <p id="mensajeOpinion" class="mt-3 mb-0" aria-live="polite"></p>
+                  </footer>
+              </fieldset>
+          </form>
+      </article>
+  
       <article class="carousel-item">
         <blockquote class="card testimonial-card mobile-slide-card p-4 border-0 shadow-sm m-0">
           <p class="card-text">"Me encanta que atiendan hasta tarde. Pasar por La Cabañita por un mostrito ya es tradición."</p>
