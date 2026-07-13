@@ -25,3 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 });
+
+window.addEventListener("load", hideLoader);
+
+window.addEventListener("pageshow", hideLoader);
+
+function showLoader() {
+    const l = document.getElementById("pageLoader");
+
+    if (l) {
+        l.classList.add("visible");
+        l.setAttribute("aria-hidden", "false");
+    }
+}
+
+function hideLoader() {
+    setTimeout(() => {
+        const l = document.getElementById("pageLoader");
+
+        if (l) {
+            l.classList.remove("visible");
+            l.setAttribute("aria-hidden", "true");
+        }
+
+        document.body.classList.remove("page-loading");
+    }, 250);
+}
