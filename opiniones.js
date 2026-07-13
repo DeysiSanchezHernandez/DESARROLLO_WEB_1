@@ -105,3 +105,6 @@ function updateReviewsAverage() {
     textElement.textContent = `${reviews.length} opinión${reviews.length === 1 ? "" : "es"} registrada${reviews.length === 1 ? "" : "s"}`;
 }
 
+escapeReview()
+handleResponsiveReviews()
+getItemsPerSlide()
