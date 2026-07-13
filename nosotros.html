@@ -9,38 +9,47 @@
 </head>
 <body>
 
-    <header class="header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark container py-2">
-        <a href="index.html" class="navbar-brand brand-link">
-            <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="brand-logo">
-            <span class="brand-name">
-                <span class="logo-title">POLLERÍA</span>
-                <span class="logo-subtitle">LA CABAÑITA</span>
-            </span>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <aside class="offcanvas-lg offcanvas-end bg-black text-white ms-lg-auto" tabindex="-1" id="menuPrincipal" data-bs-backdrop="false" data-bs-scroll="true" style="--bs-offcanvas-width: 260px;">
-            <header class="offcanvas-header">
-                <h2 class="offcanvas-title h5 title-red">La Cabañita</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
-            </header>
-
-        <section class="offcanvas-body justify-content-end">
-            <ul class="navbar-nav ms-lg-auto text-center text-lg-end">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-            <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-            <li class="nav-item"><a class="nav-link nav-cart" href="carrito.html">Carrito</a></li>
-            </ul>
-        </section>
-        </aside>
-    </nav>
-    </header>
+    <header class="site-header sticky-top">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark container-fluid py-2"
+                aria-label="Navegación principal"
+            >
+                <a class="navbar-brand brand" href="index.html"
+                    ><img
+                        src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                        alt="Logo de Pollería La Cabañita"
+                    /><span class="brand-name" aria-label="Pollería La Cabañita"><span>POLLERÍA</span><span>LA CABAÑITA</span></span></a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <section class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactanos.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrito.html"
+                                >Carrito <span id="cartCount" class="cart-count">0</span></a
+                            >
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </header>
 
     <main>
     <section class="hero hero-nosotros text-center text-white">
