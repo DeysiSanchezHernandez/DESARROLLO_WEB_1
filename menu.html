@@ -3,607 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pollería La Cabañita Bagua | Menú</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        <meta
+            name="description"
+            content="Pollería La Cabañita en Bagua: pollo a la brasa, parrillas, combos y delivery."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="icon" type="image/png" sizes="512x512" href="imagenes/favicon-cabanita.png" />
+        <link rel="apple-touch-icon" href="imagenes/favicon-cabanita.png" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Pollería La Cabañita | Carrito</title>
+
 </head>
 
-<body>
 
-    <header class="header sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-dark container py-2">
-            <a href="index.html" class="navbar-brand brand-link">
-                <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="brand-logo">
-                <span class="brand-name">
-                    <span class="logo-title">POLLERÍA</span>
-                    <span class="logo-subtitle">LA CABAÑITA</span>
-                </span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <aside class="offcanvas-lg offcanvas-end bg-black text-white ms-lg-auto" tabindex="-1" id="menuPrincipal" data-bs-backdrop="false" data-bs-scroll="true" style="--bs-offcanvas-width: 260px;">
-                <header class="offcanvas-header">
-                    <h2 class="offcanvas-title h5 title-red">La Cabañita</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
-                </header>
 
-                <section class="offcanvas-body justify-content-end">
-                    <ul class="navbar-nav ms-lg-auto text-center text-lg-end">
+    <body>
+        <aside id="pageLoader" class="page-loader" aria-hidden="true" aria-label="Cargando página">
+            <figure class="loader-content">
+                <img
+                    src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                    alt=""
+                    class="loader-logo"
+                />
+                <span class="loader-ring" aria-hidden="true"></span>
+                <figcaption>Preparando tu experiencia...</figcaption>
+            </figure>
+        </aside>
+
+
+
+        <header class="site-header sticky-top">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark container-fluid py-2"
+                aria-label="Navegación principal"
+            >
+                <a class="navbar-brand brand" href="index.html">
+                    <img
+                        src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                        alt="Logo de Pollería La Cabañita"
+                    /><span class="brand-name" aria-label="Pollería La Cabañita"><span>POLLERÍA</span><span>LA CABAÑITA</span></span></a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <section class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="menu.html">Menú</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-                        <li class="nav-item"><a class="nav-link nav-cart" href="carrito.html">Carrito<span id="cartCount" class="badge-cart">0</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactanos.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="carrito.html"
+                                >Carrito <span id="cartCount" class="cart-count">0</span></a
+                            >
+                        </li>
                     </ul>
                 </section>
-            </aside>
-        </nav>
+            </nav>
+        </header>
 
-        <nav class="container menu-tabs d-flex justify-content-star justify-content-lg-center py-2 border-top border-secondary text-nowrap" aria-label="Categorías del menú">
-            <a href="#pollos" class="btn btn-outline-danger btn-sm rounded-pill px-3">POLLOS</a>
-            <a href="#parrillas" class="btn btn-outline-danger btn-sm rounded-pill px-3">PARRILLAS</a>
-            <a href="#papas" class="btn btn-outline-danger btn-sm rounded-pill px-3">PAPAS</a>
-            <a href="#ensaladas" class="btn btn-outline-danger btn-sm rounded-pill px-3">ENSALADAS</a>
-            <a href="#bebidas" class="btn btn-outline-danger btn-sm rounded-pill px-3">BEBIDAS</a>
-            <a href="#cremas" class="btn btn-outline-danger btn-sm rounded-pill px-3">CREMAS</a>
-        </nav>
-    </header>
 
-    <main>
-            <section class="hero hero-menu text-center text-white">
-                <section class="container">
-                    <h1 class="display-4 fw-bold title-red">Nuestro Menú Tradicional</h1>
-                    <p class="lead text-light opacity-75">El verdadero sabor de la brasa directo a tu mesa.</p>
-                </section>
-            </section>
-
-            <section class="container section-space">
-            <section id="pollos" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| POLLOS A LA BRASA</h2>
-                </header>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/POLLOALABRASAENTERO.png" class="card-img-top img-fluid" alt="Pollo a la brasa entero">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Pollo a la Brasa Entero</h3>
-                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 58.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/POLLOALABRASAMEDIO.png" class="card-img-top img-fluid" alt="Medio pollo a la brasa">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">1/2 de Pollo a la Brasa</h3>
-                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 30.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/POLLOALABRASACUARTO.png" class="card-img-top img-fluid" alt="Cuarto de pollo a la brasa">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">1/4 de Pollo a la Brasa</h3>
-                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 16.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/POLLOALABRASAOCTAVO.png" class="card-img-top img-fluid" alt="Octavo de pollo a la brasa">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">1/8 de Pollo a la Brasa</h3>
-                                <p class="card-text text-muted">Acompañado de papas fritas, ensalada fresca y cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
+        <!-- Main content -->
+        <main>
+            <section class="hero compact hero-cart">
+                <article class="container-fluid hero-content">
+                    <span class="eyebrow">Tu pedido</span>
+                    <h1>Carrito de compras</h1>
+                    <p>Revisa las cantidades antes de enviar tu pedido.</p>
                 </article>
             </section>
+            
+            
 
-            <section id="parrillas" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| PARRILLAS</h2>
-                </header>
 
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PARRILLAPOLLO.png" class="card-img-top img-fluid" alt="Parrillada de pollo">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Parrillada de Pollo</h3>
-                                <p class="card-text text-muted">Acompañada de papa sancochada, camote, choclo, ensalada y cremas.</p>
+
+
+
+
+            <section class="section cart-page">
+                <article class="container-fluid">
+                    <section class="cart-page-grid" aria-label="Pedido y datos del cliente">
+                        <section class="cart-column">
+                            <header class="cart-column-header">
+                                <span class="eyebrow">Productos seleccionados</span>
+                                <h2>Detalle de tu pedido</h2>
                             </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 19.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
+                            <section id="cartItems" class="cart-list" aria-live="polite"></section>
                         </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PARRILLACARNE.png" class="card-img-top img-fluid" alt="Parrillada de carne">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Parrillada de Carne</h3>
-                                <p class="card-text text-muted">Acompañada de papa sancochada, camote, choclo, ensalada y cremas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 22.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PARRILLACERDO.png" class="card-img-top img-fluid" alt="Parrillada de cerdo">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Parrillada de Cerdo</h3>
-                                <p class="card-text text-muted">Acompañada de papa sancochada, camote, choclo, ensalada y cremas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 22.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PARRILLAMIXTA.png" class="card-img-top img-fluid" alt="Parrillada mixta">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Parrillada Mixta</h3>
-                                <p class="card-text text-muted">Acompañada de papa sancochada, camote, choclo, ensalada y cremas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 29.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-            </section>
-
-            <section id="papas" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| PAPAS</h2>
-                </header>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PAPAFRITA.png" class="card-img-top img-fluid" alt="Papas fritas">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Papas fritas</h3>
-                                <p class="card-text text-muted">Crujientes papas fritas corte original.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 8.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                    <img src="./imagenes/PAPAFRITACRINKLE.png" class="card-img-top img-fluid" alt="Papas fritas crinkle">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Papas fritas crinkle</h3>
-                                <p class="card-text text-muted">Crujientes papas fritas corte crinkle.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 10.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PAPAFRITAWAFFLE.png" class="card-img-top img-fluid" alt="Papas fritas waffle">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Papas fritas waffle</h3>
-                                <p class="card-text text-muted">Crujientes papas fritas corte waffle.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 12.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/PAPAFRITACURLY.png" class="card-img-top img-fluid" alt="Papas fritas curly">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Papas fritas curly</h3>
-                                <p class="card-text text-muted">Crujientes papas fritas corte curly.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 15.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
+                        <aside class="checkout-column" aria-label="Datos para completar el pedido">
+                            <form id="formPedido" class="customer-form" novalidate>
+                                <header class="checkout-header">
+                                    <span class="eyebrow">Información obligatoria</span>
+                                    <h2>Datos del cliente</h2>
+                                    <p>Completa los campos marcados para enviar tu pedido.</p>
+                                </header>
+                                <fieldset class="customer-fields">
+                                    <legend class="visually-hidden">Información personal</legend>
+                                    <label class="form-label" for="clienteNombre"
+                                        >Nombres y apellidos *</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        id="clienteNombre"
+                                        name="clienteNombre"
+                                        type="text"
+                                        minlength="3"
+                                        maxlength="80"
+                                        autocomplete="name"
+                                        required
+                                    />
+                                    <p class="invalid-feedback">Escribe tus nombres y apellidos.</p>
+                                    <label class="form-label" for="clienteTelefono"
+                                        >Número de celular *</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        id="clienteTelefono"
+                                        name="clienteTelefono"
+                                        type="tel"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{9}"
+                                        maxlength="9"
+                                        autocomplete="tel"
+                                        placeholder="987654321"
+                                        required
+                                    />
+                                    <p class="invalid-feedback">
+                                        Ingresa un celular peruano de 9 dígitos.
+                                    </p>
+                                    <label class="form-label" for="tipoEntrega"
+                                        >Tipo de entrega *</label
+                                    >
+                                    <select
+                                        class="form-select"
+                                        id="tipoEntrega"
+                                        name="tipoEntrega"
+                                        required
+                                    >
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="Delivery">Delivery</option>
+                                        <option value="Recojo en tienda">Recojo en tienda</option>
+                                    </select>
+                                    <p class="invalid-feedback">Selecciona el tipo de entrega.</p>
+                                    <section id="camposDelivery" class="delivery-fields" hidden>
+                                        <label class="form-label" for="clienteDireccion"
+                                            >Dirección de entrega *</label
+                                        >
+                                        <input
+                                            class="form-control"
+                                            id="clienteDireccion"
+                                            name="clienteDireccion"
+                                            type="text"
+                                            maxlength="140"
+                                            autocomplete="street-address"
+                                            placeholder="Calle, avenida, número y sector"
+                                        />
+                                        <label class="form-label" for="clienteReferencia"
+                                            >Referencia *</label
+                                        >
+                                        <textarea
+                                            class="form-control"
+                                            id="clienteReferencia"
+                                            name="clienteReferencia"
+                                            rows="3"
+                                            maxlength="180"
+                                            placeholder="Frente a..., cerca de..."
+                                        ></textarea>
+                                    </section>
+                                    <label class="form-label" for="metodoPago"
+                                        >Método de pago *</label
+                                    >
+                                    <select
+                                        class="form-select"
+                                        id="metodoPago"
+                                        name="metodoPago"
+                                        required
+                                    >
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="Efectivo">Efectivo</option>
+                                        <option value="Yape">Yape</option>
+                                        <option value="Plin">Plin</option>
+                                        <option value="Tarjeta">Tarjeta</option>
+                                    </select>
+                                    <p class="invalid-feedback">Selecciona un método de pago.</p>
+                                    <section id="camposEfectivo" class="cash-fields" hidden>
+                                        <label class="form-label" for="montoEfectivo"
+                                            >¿Con cuánto pagará? *</label
+                                        >
+                                        <input
+                                            class="form-control"
+                                            id="montoEfectivo"
+                                            name="montoEfectivo"
+                                            type="number"
+                                            min="0"
+                                            step="0.10"
+                                            inputmode="decimal"
+                                            placeholder="Ejemplo: 50.00"
+                                        />
+                                        <p
+                                            id="mensajeVuelto"
+                                            class="change-message"
+                                            aria-live="polite"
+                                        ></p>
+                                    </section>
+                                    <label class="form-label" for="clienteNotas"
+                                        >Indicaciones adicionales</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="clienteNotas"
+                                        name="clienteNotas"
+                                        rows="3"
+                                        maxlength="220"
+                                        placeholder="Sin ají, tocar el timbre, etc."
+                                    ></textarea>
+                                </fieldset>
+                                <section class="cart-summary">
+                                    <h2>Resumen</h2>
+                                    <section id="resumenTotal" aria-live="polite"></section>
+                                    <button
+                                        id="btnWhatsapp"
+                                        class="btn btn-brand w-100 mt-3"
+                                        type="submit"
+                                    >
+                                        <i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                                        WhatsApp
+                                    </button>
+                                    <button
+                                        id="vaciarCarrito"
+                                        class="btn btn-outline-danger w-100 mt-2"
+                                        type="button"
+                                    >
+                                        Vaciar carrito
+                                    </button>
+                                    <p
+                                        id="mensajePedido"
+                                        class="form-message mt-3 mb-0"
+                                        aria-live="assertive"
+                                    ></p>
+                                    <small class="d-block mt-3"
+                                        >El negocio confirmará disponibilidad, costo de delivery y
+                                        total final.</small
+                                    >
+                                </section>
+                            </form>
+                        </aside>
                     </section>
                 </article>
             </section>
+        </main>
 
-            <section id="ensaladas" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| ENSALADAS</h2>
-                </header>
 
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/ENSALADACESAR.png" class="card-img-top img-fluid" alt="Ensalada César">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ensalada César</h3>
-                                <p class="card-text text-muted">Deliciosa ensalada César con su toque especial.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
+        
+        <aside class="floating-tools" aria-label="Herramientas de visualización">
+            <button
+                id="themeToggle"
+                class="floating-button theme-toggle"
+                type="button"
+                aria-label="Activar modo nocturno"
+                title="Cambiar tema"
+            >
+                <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            </button>
+            <button
+                id="backToTop"
+                class="floating-button back-to-top"
+                type="button"
+                aria-label="Volver al inicio"
+                title="Volver arriba"
+            >
+                <i class="bi bi-arrow-up" aria-hidden="true"></i>
+            </button>
+        </aside>
 
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/ENSALADAGREEK.png" class="card-img-top img-fluid" alt="Ensalada Greek">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ensalada Greek</h3>
-                                <p class="card-text text-muted">Deliciosa ensalada Greek con su toque griego.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/ENSALADAKOSAMBARI.png" class="card-img-top img-fluid" alt="Ensalada Kosambari">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ensalada Kosambari</h3>
-                                <p class="card-text text-muted">Deliciosa ensalada Kosambari con su toque indio.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/ENSALADACAPRESE.png" class="card-img-top img-fluid" alt="Ensalada Caprese">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ensalada Caprese</h3>
-                                <p class="card-text text-muted">Deliciosa ensalada Caprese con su toque italiano.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 9.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-            </section>
-
-            <section id="bebidas" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| BEBIDAS</h2>
-                </header>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/LIMONADAFROZEN.png" class="card-img-top img-fluid" alt="Limonada frozen">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Limonada frozen 1L</h3>
-                                <p class="card-text text-muted">Mantente fresco con nuestra variedad de bebidas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 15.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/CHICHAMORADA.png" class="card-img-top img-fluid" alt="Chicha morada">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Chicha morada 1L</h3>
-                                <p class="card-text text-muted">Mantente fresco con nuestra variedad de bebidas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 12.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/MARACUYA.png" class="card-img-top img-fluid" alt="Maracuyá">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Maracuyá 1L</h3>
-                                <p class="card-text text-muted">Mantente fresco con nuestra variedad de bebidas.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 13.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/INKA500.png" class="card-img-top img-fluid" alt="Inka Cola 500 ml">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Inka Cola 500 ml</h3>
-                                <p class="card-text text-muted">Bebida personal para acompañar tu pedido.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 3.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/COCA500.png" class="card-img-top img-fluid" alt="Coca Cola 500 ml">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Coca Cola 500 ml</h3>
-                                <p class="card-text text-muted">Bebida personal para acompañar tu pedido.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 3.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/AGUA500.png" class="card-img-top img-fluid" alt="Agua 500 ml">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Agua 500 ml</h3>
-                                <p class="card-text text-muted">Agua personal para acompañar tu pedido.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 2.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-            </section>
-
-            <section id="cremas" class="row g-4 menu-category">
-                <header class="col-12">
-                    <h2 class="h3 title-red menu-category-title">| CREMAS EXTRA</h2>
-                </header>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/MAYONESA.png" class="card-img-top img-fluid" alt="Mayonesa">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Mayonesa</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/KETCHUP.png" class="card-img-top img-fluid" alt="Ketchup">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ketchup</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/MOSTAZA.png" class="card-img-top img-fluid" alt="Mostaza">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Mostaza</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/ACEITUNA.png" class="card-img-top img-fluid" alt="Crema de aceituna">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Aceituna</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/HUACATAI.png" class="card-img-top img-fluid" alt="Huacatay">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Huacatay</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                    <img src="./imagenes/AJI.png" class="card-img-top img-fluid" alt="Ají">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Ají</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-
-                <article class="col-12 col-md-6 col-lg-4">
-                    <section class="card product-card h-100 shadow-sm">
-                        <img src="./imagenes/CHIMICHURI.png" class="card-img-top img-fluid" alt="Chimichurri">
-                        <section class="card-body d-flex flex-column justify-content-between">
-                            <header>
-                                <h3 class="h5 card-title fw-bold">Chimichurri</h3>
-                                <p class="card-text text-muted">Sigue disfrutando de nuestras deliciosas cremas caseras.</p>
-                            </header>
-                            <footer class="card-footer-action">
-                                <span class="fs-4 fw-bold text-dark">S/ 1.00</span>
-                                <button class="btn btn-cabanita">Agregar 🛒</button>
-                            </footer>
-                        </section>
-                    </section>
-                </article>
-              </section>
-   
-        </section>
-    </main>
-
-    <footer class="footer py-5 text-white-50">
-        <section class="container">
-            <section class="row g-4">
-                <aside class="col-12 col-md-4">
-                    <section class="footer-brand mb-3">
-                        <img src="./imagenes/LOGOBNPOS.png" alt="Logo Blanco" class="footer-logo">
+        <!-- Footer     -->
+        <footer class="site-footer">
+            <section class="container-fluid py-5">
+                <section class="row g-4 align-items-start">
+                    <article class="col-lg-5 footer-brand">
+                        <img
+                            src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                            alt="Logo La Cabañita"
+                        />
                         <header>
-                            <span class="text-white d-block small">POLLERÍA</span>
-                            <span class="text-white d-block small">LA CABAÑITA</span>
+                            <h2 class="footer-brand-name"><span>POLLERÍA</span><span>LA CABAÑITA</span></h2>
                         </header>
-                    </section>
-                    <p class="small">El mejor pollo a la brasa de Bagua, disponible toda la noche. Calidad, sabor y servicio excepcional.</p>
-                </aside>
-
-                <section class="col-12 col-md-4">
-                    <h4 class="h5 text-white mb-3">Contáctanos</h4>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2">📍 Av. Héroes del Cenepa 1435, Bagua</li>
-                        <li class="mb-2">📞 +51 988 714 324</li>
-                        <li class="mb-2">🕒 Abierto a partir de las 5 p.m.</li>
-                    </ul>
-                </section>
-
-                <section class="col-12 col-md-4">
-                    <h4 class="h5 text-white mb-3">Síguenos</h4>
-                    <nav class="social-nav" aria-label="Redes sociales">
-                        <a href="https://wa.me/51930838877" target="_blank" class="social-icon-circle" title="WhatsApp">W</a>
-                        <a href="https://www.instagram.com/polleria_la_cabanita/" target="_blank" class="social-icon-circle" title="Instagram">I</a>
-                        <a href="https://web.facebook.com/" target="_blank" class="social-icon-circle" title="Facebook">F</a>
-                        <a href="https://www.tiktok.com/" target="_blank" class="social-icon-circle" title="TikTok">T</a>
+                    </article>
+                    <address class="col-12 col-md-6 col-lg-3">
+                        <h3>Contáctanos</h3>
+                        <p>Av. Héroes del Cenepa 1466, Bagua 01721</p>
+                        <p><a href="tel:+51988714324">+51 988 714 324</a></p>
+                        <p>Desde las 5:00 p. m.</p>
+                    </address>
+                    <nav class="col-12 col-md-6 col-lg-4" aria-label="Redes sociales">
+                        <h3>Síguenos</h3>
+                        <ul class="social-links list-unstyled">
+                            <li>
+                                <a
+                                    href="https://wa.me/51988714324"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="WhatsApp"
+                                    ><i class="bi bi-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/polleria_la_cabanita/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://web.facebook.com/profile.php?id=100043336046885" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@pollerialacabanita?lang=es-419" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                    <i class="bi bi-tiktok"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </section>
+                <hr />
+                <p class="mb-0 text-center">
+                    © 2026 Pollería La Cabañita. Todos los derechos reservados.
+                </p>
             </section>
-
-            <hr class="border-secondary my-4">
-            <p class="text-center small text-white-50 mb-0">&copy; 2026 Pollería La Cabañita Bagua. Todos los derechos reservados.</p>
-        </section>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/carrito.js"></script>
+    </body>
 </html>
