@@ -134,3 +134,19 @@ function toggleDeliveryFields() {
         reference.classList.remove("is-invalid");
     }
 }
+
+function toggleCashFields() {
+    const method = document.getElementById("metodoPago").value;
+    const fields = document.getElementById("camposEfectivo");
+    const amount = document.getElementById("montoEfectivo");
+    const isCash = method === "Efectivo";
+
+    fields.hidden = !isCash;
+    amount.required = isCash;
+
+    if (!isCash) {
+        amount.value = "";
+        amount.classList.remove("is-invalid");
+        document.getElementById("mensajeVuelto").textContent = "";
+    }
+}
