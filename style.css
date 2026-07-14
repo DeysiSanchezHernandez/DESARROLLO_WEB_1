@@ -1125,3 +1125,60 @@ body {
         width: 100%;
     }
 }
+
+/* =========================================================
+   PROMOCIONES MÁS COMPACTAS Y SEPARADAS
+========================================================= */
+.promo-grid {
+    max-width: 1500px;
+    margin-inline: auto;
+}
+
+.promo-column {
+    display: flex;
+}
+
+.promo-column .promo-card {
+    width: 100%;
+    max-width: 610px;
+    margin-inline: auto;
+}
+
+.promo-card figure {
+    max-height: 390px;
+    overflow: hidden;
+}
+
+.promo-card figure img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 390px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.promo-body {
+    padding: 1.35rem 1.5rem 1.5rem;
+}
+
+@media (min-width: 1200px) {
+    .promo-grid {
+        padding-inline: clamp(2rem, 5vw, 6rem);
+    }
+
+    .promo-column:first-child .promo-card {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .promo-column:last-child .promo-card {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .promo-column .promo-card {
+        max-width: 720px;
+    }
+}
