@@ -1,0 +1,41 @@
+[
+    {
+        "id": "pollo-entero",
+        "nombre": "Pollo a la Brasa Entero",
+        "descripcion": "Acompañado de papas fritas, ensalada fresca y cremas caseras.",
+        "precio": 58.0,
+        "categoria": "pollos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/POLLOALABRASAENTERO.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "medio-pollo",
+        "nombre": "1/2 de Pollo a la Brasa",
+        "descripcion": "Acompañado de papas fritas, ensalada fresca y cremas caseras.",
+        "precio": 30.0,
+        "categoria": "pollos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/POLLOALABRASAMEDIO.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "cuarto-pollo",
+        "nombre": "1/4 de Pollo a la Brasa",
+        "descripcion": "Acompañado de papas fritas, ensalada fresca y cremas caseras.",
+        "precio": 16.0,
+        "categoria": "pollos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/POLLOALABRASACUARTO.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "octavo-pollo",
+        "nombre": "1/8 de Pollo a la Brasa",
+        "descripcion": "Acompañado de papas fritas, ensalada fresca y cremas caseras.",
+        "precio": 9.0,
+        "categoria": "pollos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/POLLOALABRASAOCTAVO.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
