@@ -93,3 +93,17 @@ function renderProducts() {
         })
         .join("");
 }
+
+function createCategorySection(title, products) {
+    return `
+        <section class="menu-category" aria-labelledby="category-${slug(title)}">
+            <header class="menu-category-header">
+                <h2 id="category-${slug(title)}">${escapeHTML(title)}</h2>
+                <span>${products.length} ${products.length === 1 ? "producto" : "productos"}</span>
+            </header>
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                ${products.map(createProductCard).join("")}
+            </section>
+        </section>
+    `;
+}
