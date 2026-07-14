@@ -249,3 +249,74 @@
         "destacado": false,
         "costoEnvase": 0.0
     },
+        {
+        "id": "mayonesa",
+        "nombre": "Mayonesa",
+        "descripcion": "Porción adicional de crema casera.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/MAYONESA.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "ketchup",
+        "nombre": "Ketchup",
+        "descripcion": "Porción adicional de crema.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/KETCHUP.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "mostaza",
+        "nombre": "Mostaza",
+        "descripcion": "Porción adicional de crema.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/MOSTAZA.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "aceituna",
+        "nombre": "Crema de aceituna",
+        "descripcion": "Porción adicional de crema casera.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/ACEITUNA.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "huacatay",
+        "nombre": "Huacatay",
+        "descripcion": "Porción adicional de crema casera.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/HUACATAI.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "aji",
+        "nombre": "Ají",
+        "descripcion": "Porción adicional de crema casera.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/AJI.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "chimichurri",
+        "nombre": "Chimichurri",
+        "descripcion": "Porción adicional de salsa casera.",
+        "precio": 1.0,
+        "categoria": "cremas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/CHIMICHURI.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    }
+]
