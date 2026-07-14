@@ -34,3 +34,85 @@ function cartActions(event) {
     saveCart(cart.filter((product) => product.cantidad > 0));
     renderCart();
 }
+
+
+function renderCart() {
+    const cart = getCart();
+    const cartItems = document.getElementById("cartItems");
+    const resumen = document.getElementById("resumenTotal");
+
+    if (!cart.length) {
+        cartItems.innerHTML = `
+            <article class="review-form text-center">
+                <h2>Tu carrito está vacío</h2>
+                <p>Agrega productos desde nuestro menú.</p>
+                <a class="btn btn-brand" href="menu.html">Ver menú</a>
+            </article>
+        `;
+
+        resumen.innerHTML = `
+            <p class="total-line">
+                <span>Total</span>
+                <strong>S/ 0.00</strong>
+            </p>
+        `;
+
+        return;
+    }
+
+    let subtotal = 0;
+
+    cartItems.innerHTML = cart
+        .map((item) => {
+            const product = catalog.find((candidate) => candidate.id === item.id);
+
+            if (!product) {
+                return "";
+            }
+
+            const itemTotal = product.precio * item.cantidad;
+            subtotal += itemTotal;
+
+            return `
+            <article class="cart-item">
+                <figure class="cart-item-media">
+                    <img src="${escapeHTML(product.imagen)}" alt="${escapeHTML(product.nombre)}">
+                </figure>
+                <section class="cart-item-info">
+                    <h3>${escapeHTML(product.nombre)}</h3>
+                    <p>S/ ${Number(product.precio).toFixed(2)} c/u</p>
+                    <button class="cart-remove" type="button" data-action="remove" data-id="${escapeHTML(product.id)}">Eliminar</button>
+                </section>
+                <aside class="cart-item-actions">
+                    <nav class="quantity" aria-label="Cantidad de ${escapeHTML(product.nombre)}">
+                        <button type="button" data-action="minus" data-id="${escapeHTML(product.id)}" aria-label="Disminuir cantidad">−</button>
+                        <strong>${item.cantidad}</strong>
+                        <button type="button" data-action="plus" data-id="${escapeHTML(product.id)}" aria-label="Aumentar cantidad">+</button>
+                    </nav>
+                    <strong class="cart-line-total">S/ ${itemTotal.toFixed(2)}</strong>
+                </aside>
+            </article>
+        `;
+        })
+        .join("");
+
+    const envases = calculateContainers(cart);
+    const total = subtotal + envases;
+
+    resumen.innerHTML = `
+        <p class="total-line">
+            <span>Subtotal</span>
+            <strong>S/ ${subtotal.toFixed(2)}</strong>
+        </p>
+
+        <p class="total-line">
+            <span>Envases</span>
+            <strong>S/ ${envases.toFixed(2)}</strong>
+        </p>
+
+        <p class="total-line grand-total">
+            <span>Total referencial</span>
+            <strong>S/ ${total.toFixed(2)}</strong>
+        </p>
+    `;
+}
