@@ -217,3 +217,85 @@ function validateCustomerForm() {
     message.className = "form-message mt-3 mb-0";
     return true;
 }
+
+
+function sendWhatsapp(event) {
+    event.preventDefault();
+
+    const cart = getCart();
+
+    if (!cart.length) {
+        toast("Tu carrito está vacío");
+        return;
+    }
+
+    if (!validateCustomerForm()) {
+        return;
+    }
+
+    const customer = {
+        nombre: document.getElementById("clienteNombre").value.trim(),
+        telefono: document.getElementById("clienteTelefono").value.trim(),
+        entrega: document.getElementById("tipoEntrega").value,
+        direccion: document.getElementById("clienteDireccion").value.trim(),
+        referencia: document.getElementById("clienteReferencia").value.trim(),
+        pago: document.getElementById("metodoPago").value,
+        efectivo: document.getElementById("montoEfectivo").value,
+        notas: document.getElementById("clienteNotas").value.trim(),
+    };
+
+    let subtotal = 0;
+
+    const productLines = cart
+        .map((item) => {
+            const product = catalog.find((candidate) => candidate.id === item.id);
+
+            if (!product) {
+                return "";
+            }
+
+            const lineTotal = product.precio * item.cantidad;
+            subtotal += lineTotal;
+
+            return `• ${item.cantidad} x ${product.nombre} — S/ ${lineTotal.toFixed(2)}`;
+        })
+        .filter(Boolean);
+
+    const containers = calculateContainers(cart);
+    const total = subtotal + containers;
+
+    const deliveryData =
+        customer.entrega === "Delivery"
+            ? `\nDirección: ${customer.direccion}\nReferencia: ${customer.referencia}`
+            : "";
+
+    const cashData =
+        customer.pago === "Efectivo"
+            ? `\nPaga con: S/ ${Number(customer.efectivo).toFixed(2)}\nVuelto aprox.: S/ ${(Number(customer.efectivo) - total).toFixed(2)}`
+            : "";
+
+    const notes = customer.notas ? `\nIndicaciones: ${customer.notas}` : "";
+
+    const text = [
+        "Hola, deseo realizar el siguiente pedido:",
+        "",
+        ...productLines,
+        "",
+        `Subtotal: S/ ${subtotal.toFixed(2)}`,
+        `Envases: S/ ${containers.toFixed(2)}`,
+        `Total referencial: S/ ${total.toFixed(2)}`,
+        "",
+        "DATOS DEL CLIENTE",
+        `Nombre: ${customer.nombre}`,
+        `Celular: ${customer.telefono}`,
+        `Entrega: ${customer.entrega}${deliveryData}`,
+        `Método de pago: ${customer.pago}${cashData}${notes}`,
+        "",
+        "Por favor, confirmen disponibilidad, costo de delivery y total final.",
+    ].join("\n");
+
+    document.getElementById("mensajePedido").textContent = "Datos correctos. Abriendo WhatsApp…";
+    document.getElementById("mensajePedido").className = "form-message success mt-3 mb-0";
+
+    window.open(`https://wa.me/51988714324?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+}
