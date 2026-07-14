@@ -107,3 +107,25 @@ function createCategorySection(title, products) {
         </section>
     `;
 }
+
+function createProductCard(product) {
+    return `
+        <article class="col">
+            <section class="card product-card h-100">
+                <figure class="product-image">
+                    <img src="${escapeHTML(product.imagen)}" alt="${escapeHTML(product.nombre)}" loading="lazy">
+                    ${product.destacado ? '<span class="product-badge">Recomendado</span>' : ""}
+                </figure>
+                <section class="card-body d-flex flex-column">
+                    <span class="product-category">${escapeHTML(categoryLabels[product.categoria] || product.categoria)}</span>
+                    <h3 class="h5">${escapeHTML(product.nombre)}</h3>
+                    <p>${escapeHTML(product.descripcion)}</p>
+                    <footer class="product-footer mt-auto">
+                        <strong class="product-price">S/ ${Number(product.precio).toFixed(2)}</strong>
+                        <button class="btn btn-brand" type="button" data-add="${escapeHTML(product.id)}">Agregar</button>
+                    </footer>
+                </section>
+            </section>
+        </article>
+    `;
+}
