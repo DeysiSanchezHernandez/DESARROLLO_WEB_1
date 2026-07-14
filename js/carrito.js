@@ -4,6 +4,44 @@ let catalog = [];
 
 document.addEventListener("DOMContentLoaded", initCart);
 
+async function initCart() {
+    const cartItems = document.getElementById("cartItems");
+    const formPedido = document.getElementById("formPedido");
+    const tipoEntrega = document.getElementById("tipoEntrega");
+    const vaciarCarrito = document.getElementById("vaciarCarrito");
+    const metodoPago = document.getElementById("metodoPago");
+    const montoEfectivo = document.getElementById("montoEfectivo");
+
+    try {
+        const response = await fetch("data/productos.json");
+
+        if (!response.ok) {
+            throw new Error("No se pudo cargar el catálogo.");
+        }
+
+        catalog = await response.json();
+        renderCart();
+    } catch (error) {
+        console.error(error);
+        cartItems.innerHTML =
+            '<p class="alert alert-danger">Abre el proyecto con Live Server para cargar el carrito.</p>';
+    }
+
+    cartItems.addEventListener("click", cartActions);
+    formPedido.addEventListener("submit", sendWhatsapp);
+    tipoEntrega.addEventListener("change", toggleDeliveryFields);
+    metodoPago.addEventListener("change", toggleCashFields);
+    montoEfectivo.addEventListener("input", updateChange);
+
+    vaciarCarrito.addEventListener("click", () => {
+        saveCart([]);
+        renderCart();
+        toast("Carrito vaciado");
+    });
+
+    toggleDeliveryFields();
+    toggleCashFields();
+}
 
 function cartActions(event) {
     const button = event.target.closest("[data-action]");
@@ -34,7 +72,6 @@ function cartActions(event) {
     saveCart(cart.filter((product) => product.cantidad > 0));
     renderCart();
 }
-
 
 function renderCart() {
     const cart = getCart();
@@ -116,6 +153,7 @@ function renderCart() {
         </p>
     `;
 }
+
 function toggleDeliveryFields() {
     const tipoEntrega = document.getElementById("tipoEntrega");
     const deliveryFields = document.getElementById("camposDelivery");
@@ -151,7 +189,6 @@ function toggleCashFields() {
     }
 }
 
-
 function getCurrentTotal() {
     const cart = getCart();
     const subtotal = cart.reduce((sum, item) => {
@@ -180,7 +217,6 @@ function updateChange() {
         message.className = "change-message success";
     }
 }
-
 
 function validateCustomerForm() {
     const form = document.getElementById("formPedido");
@@ -217,7 +253,6 @@ function validateCustomerForm() {
     message.className = "form-message mt-3 mb-0";
     return true;
 }
-
 
 function sendWhatsapp(event) {
     event.preventDefault();
@@ -300,8 +335,6 @@ function sendWhatsapp(event) {
     window.open(`https://wa.me/51988714324?text=${encodeURIComponent(text)}`, "_blank", "noopener");
 }
 
-
-
 function calculateContainers(cart) {
     return cart.reduce((total, item) => {
         const product = catalog.find((candidate) => candidate.id === item.id);
@@ -315,7 +348,6 @@ function calculateContainers(cart) {
         return total + containerCost * item.cantidad;
     }, 0);
 }
-
 
 function escapeHTML(value) {
     return String(value).replace(
