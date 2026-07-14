@@ -21,6 +21,31 @@ const categoryOrder = ["combos", "pollos", "parrillas", "papas", "ensaladas", "b
 
 document.addEventListener("DOMContentLoaded", initMenu);
 
+async function initMenu() {
+    const box = document.getElementById("contenedorProductos");
+    if (!box) return;
+
+    try {
+        const response = await fetch("data/productos.json");
+        if (!response.ok) throw new Error("No fue posible cargar el menú.");
+
+        menuState.productos = await response.json();
+
+        const requestedCategory = new URLSearchParams(location.search).get("categoria");
+        if (requestedCategory && categoryLabels[requestedCategory]) {
+            menuState.categoria = requestedCategory;
+            document.getElementById("filtroCategoria").value = requestedCategory;
+        }
+
+        bindFilters();
+        renderProducts();
+    } catch (error) {
+        console.error(error);
+        box.innerHTML =
+            '<article class="alert alert-danger">Abre el proyecto con Live Server para cargar el menú.</article>';
+    }
+}
+
 function bindFilters() {
     document.getElementById("buscarProducto").addEventListener("input", (event) => {
         menuState.busqueda = event.target.value.trim().toLowerCase();
