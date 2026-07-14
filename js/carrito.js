@@ -180,3 +180,40 @@ function updateChange() {
         message.className = "change-message success";
     }
 }
+
+
+function validateCustomerForm() {
+    const form = document.getElementById("formPedido");
+    const message = document.getElementById("mensajePedido");
+    const requiredFields = [...form.querySelectorAll("[required]")];
+    let firstInvalid = null;
+
+    requiredFields.forEach((field) => {
+        const isValid = field.checkValidity();
+        field.classList.toggle("is-invalid", !isValid);
+
+        if (!isValid && !firstInvalid) {
+            firstInvalid = field;
+        }
+    });
+
+    const cashField = document.getElementById("montoEfectivo");
+    if (
+        document.getElementById("metodoPago").value === "Efectivo" &&
+        Number(cashField.value) < getCurrentTotal()
+    ) {
+        cashField.classList.add("is-invalid");
+        if (!firstInvalid) firstInvalid = cashField;
+    }
+
+    if (firstInvalid) {
+        message.textContent = "Completa correctamente todos los campos obligatorios.";
+        message.className = "form-message error mt-3 mb-0";
+        firstInvalid.focus();
+        return false;
+    }
+
+    message.textContent = "";
+    message.className = "form-message mt-3 mb-0";
+    return true;
+}
