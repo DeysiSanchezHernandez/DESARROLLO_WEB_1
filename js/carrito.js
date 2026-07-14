@@ -116,3 +116,21 @@ function renderCart() {
         </p>
     `;
 }
+function toggleDeliveryFields() {
+    const tipoEntrega = document.getElementById("tipoEntrega");
+    const deliveryFields = document.getElementById("camposDelivery");
+    const address = document.getElementById("clienteDireccion");
+    const reference = document.getElementById("clienteReferencia");
+    const isDelivery = tipoEntrega.value === "Delivery";
+
+    deliveryFields.hidden = !isDelivery;
+    address.required = isDelivery;
+    reference.required = isDelivery;
+
+    if (!isDelivery) {
+        address.value = "";
+        reference.value = "";
+        address.classList.remove("is-invalid");
+        reference.classList.remove("is-invalid");
+    }
+}
