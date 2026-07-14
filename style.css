@@ -618,3 +618,30 @@ strong {
         animation: none;
     }
 }
+
+/* ==========================================================
+   TARJETAS CON IMÁGENES A SANGRE
+========================================================== */
+.promo-card,
+.product-card,
+.team-card {
+    overflow: hidden;
+}
+
+.promo-card figure,
+.product-image,
+.team-card {
+    position: relative;
+}
+
+.team-card {
+    padding: 0;
+}
+
+.team-card figcaption {
+    padding: 1.25rem;
+}
+
+.about-img {
+    display: block;
+}
