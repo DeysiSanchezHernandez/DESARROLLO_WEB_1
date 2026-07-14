@@ -189,3 +189,63 @@
         "destacado": false,
         "costoEnvase": 0.5
     },
+    {
+        "id": "limonada",
+        "nombre": "Limonada Frozen 1 L",
+        "descripcion": "Bebida refrescante preparada al momento.",
+        "precio": 15.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LIMONADAFROZEN.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "chicha",
+        "nombre": "Chicha morada 1 L",
+        "descripcion": "Chicha morada tradicional de la casa.",
+        "precio": 12.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/CHICHAMORADA.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "maracuya",
+        "nombre": "Maracuyá 1 L",
+        "descripcion": "Refresco natural de maracuyá.",
+        "precio": 13.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/MARACUYA.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "inka",
+        "nombre": "Inka Cola 500 ml",
+        "descripcion": "Bebida personal para acompañar tu pedido.",
+        "precio": 3.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/INKA500.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "coca",
+        "nombre": "Coca-Cola 500 ml",
+        "descripcion": "Bebida personal para acompañar tu pedido.",
+        "precio": 3.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/COCA500.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
+    {
+        "id": "agua",
+        "nombre": "Agua 500 ml",
+        "descripcion": "Agua personal para acompañar tu pedido.",
+        "precio": 2.0,
+        "categoria": "bebidas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/AGUA500.png",
+        "destacado": false,
+        "costoEnvase": 0.0
+    },
