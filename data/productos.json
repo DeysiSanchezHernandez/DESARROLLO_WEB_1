@@ -39,3 +39,23 @@
         "destacado": false,
         "costoEnvase": 0.5
     },
+    {
+        "id": "combo-familiar",
+        "nombre": "Combo Familiar Nocturno",
+        "descripcion": "Pollo entero, papas grandes, ensalada, gaseosa de 1.5 L y cremas.",
+        "precio": 49.9,
+        "categoria": "combos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/COMBOFAMILIARNOCTURNO.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "duo-mostrito",
+        "nombre": "Dúo Mostrito Callejero",
+        "descripcion": "Dos cuartos de pollo, dos porciones de chaufa y papas crujientes.",
+        "precio": 28.0,
+        "categoria": "combos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/DUOMONSTRITOCALLEJERO.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
