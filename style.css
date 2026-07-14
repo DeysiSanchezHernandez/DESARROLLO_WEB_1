@@ -746,3 +746,382 @@ strong {
         height: 420px;
     }
 }
+
+/* =========================================================
+   AJUSTES FINALES RESPONSIVE Y DE PRESENTACIÓN
+========================================================= */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+}
+
+.navbar {
+    min-height: 72px;
+}
+
+/* Imágenes completas: la tarjeta adopta la altura real de cada imagen */
+.product-image,
+.promo-card figure {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+}
+
+.product-image img,
+.promo-card figure img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-category + .menu-category {
+    margin-top: clamp(3.5rem, 6vw, 6rem);
+}
+
+.menu-category-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--dorado);
+}
+
+.menu-category-header h2 {
+    margin: 0;
+    color: var(--vino);
+}
+
+.menu-category-header span {
+    color: var(--rojo);
+    font-weight: 700;
+}
+
+/* Nosotros: separación real entre tarjetas */
+.values-grid > article {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.value-card {
+    margin: 0;
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* Contacto sin bloque blanco plano */
+.contact-section {
+    background: linear-gradient(135deg, var(--crema), #fff 58%, var(--gris));
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.4fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: stretch;
+}
+
+.contact-panel {
+    margin: 0;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    border-radius: var(--radius);
+    color: #fff;
+    background: linear-gradient(145deg, var(--vino), #7a1719);
+    box-shadow: var(--shadow);
+}
+
+.contact-panel .eyebrow {
+    color: var(--dorado);
+}
+.contact-panel h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+.contact-intro {
+    color: rgba(255, 255, 255, 0.85);
+}
+.contact-list {
+    display: grid;
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+.contact-list li {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.contact-list i {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--dorado);
+    color: var(--vino);
+    font-size: 1.25rem;
+}
+.contact-list span {
+    display: grid;
+}
+.contact-list strong {
+    color: var(--dorado);
+}
+.contact-panel a:not(.btn) {
+    color: #fff;
+}
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.contact-actions .btn-outline-danger {
+    border-color: #fff;
+    color: #fff;
+}
+.contact-actions .btn-outline-danger:hover {
+    background: #fff;
+    color: var(--vino);
+}
+.contact-layout .map-frame {
+    height: 100%;
+    min-height: 520px;
+}
+
+.faq-section {
+    background: #fff;
+}
+.faq-wrap {
+    max-width: 1100px !important;
+    margin-inline: auto;
+}
+.accordion {
+    display: grid;
+    gap: 0.85rem;
+}
+.accordion-item {
+    overflow: hidden;
+    border: 1px solid rgba(70, 13, 13, 0.12) !important;
+    border-radius: 0.9rem !important;
+    box-shadow: 0 8px 22px rgba(70, 13, 13, 0.07);
+}
+.accordion-button {
+    font-family: "Chau Philomene One", sans-serif;
+    font-size: 1.15rem;
+}
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background: var(--vino);
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+/* Opiniones: controles visibles y navegación táctil */
+.reviews-carousel {
+    padding-inline: 3.25rem;
+    padding-bottom: 2.75rem;
+}
+.reviews-carousel .carousel-control-prev,
+.reviews-carousel .carousel-control-next {
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--vino);
+    opacity: 1;
+}
+.reviews-carousel .carousel-control-prev {
+    left: 0;
+}
+.reviews-carousel .carousel-control-next {
+    right: 0;
+}
+.review-indicators {
+    bottom: 0;
+    margin-bottom: 0.25rem;
+}
+.review-indicators [data-bs-target] {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--vino);
+}
+
+/* Carrito más estético y acciones a la derecha */
+.cart-item {
+    grid-template-columns: 128px minmax(0, 1fr) auto !important;
+    padding: 1.25rem !important;
+}
+.cart-item-media {
+    margin: 0;
+}
+.cart-item-media img {
+    width: 128px !important;
+    height: 128px !important;
+    border-radius: 1rem;
+    object-fit: cover !important;
+}
+.cart-item-info h3 {
+    margin-bottom: 0.35rem;
+}
+.cart-item-info p {
+    margin-bottom: 0.35rem;
+}
+.cart-remove {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--rojo);
+    text-decoration: underline;
+}
+.cart-item-actions {
+    display: grid;
+    justify-items: end;
+    gap: 0.75rem;
+    min-width: 145px;
+}
+.cart-line-total {
+    color: var(--vino);
+    font-size: 1.25rem;
+}
+.cash-fields {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.9rem;
+    background: var(--crema);
+    border-left: 4px solid var(--dorado);
+}
+.change-message {
+    margin: 0;
+    font-weight: 700;
+}
+.change-message.error {
+    color: var(--rojo);
+}
+.change-message.success {
+    color: #198754;
+}
+
+@media (max-width: 991.98px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .contact-layout .map-frame {
+        min-height: 420px;
+    }
+    .values-grid {
+        row-gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        overflow-x: hidden;
+    }
+    .site-header {
+        top: 0;
+    }
+    .navbar {
+        min-height: 68px;
+    }
+    .navbar-brand {
+        max-width: calc(100% - 72px);
+    }
+    .brand img {
+        width: 50px;
+    }
+    .brand strong {
+        white-space: nowrap;
+        font-size: 1.25rem;
+    }
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .reviews-carousel {
+        padding-inline: 0;
+        padding-bottom: 3rem;
+    }
+    .reviews-carousel .carousel-control-prev,
+    .reviews-carousel .carousel-control-next {
+        top: auto;
+        bottom: 0;
+        transform: none;
+    }
+    .reviews-carousel .carousel-control-prev {
+        left: calc(50% - 60px);
+    }
+    .reviews-carousel .carousel-control-next {
+        right: calc(50% - 60px);
+    }
+    .review-indicators {
+        display: none;
+    }
+    .review-card {
+        min-height: 320px;
+        padding: 1.5rem;
+    }
+
+    .cart-item {
+        grid-template-columns: 92px minmax(0, 1fr) !important;
+        grid-template-areas:
+            "media info"
+            "actions actions";
+        text-align: left !important;
+        gap: 1rem !important;
+    }
+    .cart-item-media {
+        grid-area: media;
+    }
+    .cart-item-info {
+        grid-area: info;
+    }
+    .cart-item-actions {
+        grid-area: actions;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid var(--gris);
+    }
+    .cart-item-media img {
+        width: 92px !important;
+        height: 92px !important;
+    }
+    .quantity {
+        justify-content: flex-end !important;
+    }
+    .cart-line-total {
+        min-width: 78px;
+        text-align: right;
+    }
+    .contact-actions {
+        flex-direction: column;
+    }
+    .contact-actions .btn {
+        width: 100%;
+    }
+}
