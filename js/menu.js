@@ -66,3 +66,30 @@ function getFilteredProducts() {
 
     return list;
 }
+
+function renderProducts() {
+    const products = getFilteredProducts();
+    const box = document.getElementById("contenedorProductos");
+    document.getElementById("contadorResultados").textContent = `${products.length} productos`;
+
+    if (!products.length) {
+        box.innerHTML =
+            '<article class="alert alert-warning">No encontramos productos con esos filtros.</article>';
+        return;
+    }
+
+    if (menuState.categoria !== "todos" || menuState.busqueda) {
+        box.innerHTML = createCategorySection(
+            menuState.categoria === "todos" ? "Resultados" : categoryLabels[menuState.categoria],
+            products,
+        );
+        return;
+    }
+
+    box.innerHTML = categoryOrder
+        .map((category) => {
+            const group = products.filter((product) => product.categoria === category);
+            return group.length ? createCategorySection(categoryLabels[category], group) : "";
+        })
+        .join("");
+}
