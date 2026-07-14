@@ -160,3 +160,23 @@ function getCurrentTotal() {
     }, 0);
     return subtotal + calculateContainers(cart);
 }
+
+function updateChange() {
+    const amountField = document.getElementById("montoEfectivo");
+    const message = document.getElementById("mensajeVuelto");
+    const amount = Number(amountField.value);
+    const total = getCurrentTotal();
+
+    if (!amountField.value) {
+        message.textContent = "";
+        return;
+    }
+
+    if (amount < total) {
+        message.textContent = `El monto es menor al total por S/ ${(total - amount).toFixed(2)}.`;
+        message.className = "change-message error";
+    } else {
+        message.textContent = `Vuelto aproximado: S/ ${(amount - total).toFixed(2)}.`;
+        message.className = "change-message success";
+    }
+}
