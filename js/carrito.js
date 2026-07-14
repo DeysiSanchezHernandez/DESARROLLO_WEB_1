@@ -150,3 +150,13 @@ function toggleCashFields() {
         document.getElementById("mensajeVuelto").textContent = "";
     }
 }
+
+
+function getCurrentTotal() {
+    const cart = getCart();
+    const subtotal = cart.reduce((sum, item) => {
+        const product = catalog.find((candidate) => candidate.id === item.id);
+        return sum + (product ? product.precio * item.cantidad : 0);
+    }, 0);
+    return subtotal + calculateContainers(cart);
+}
