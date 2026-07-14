@@ -1,328 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pollería La Cabañita Bagua | Inicio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header class="header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark container py-2">
-      <a href="index.html" class="navbar-brand brand-link">
-        <img src="./imagenes/LOGOORIPOS.png" alt="Logo La Cabañita Bagua" class="brand-logo">
-        <span class="brand-name">
-          <span class="logo-title">POLLERÍA</span>
-          <span class="logo-subtitle">LA CABAÑITA</span>
-        </span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <aside class="offcanvas-lg offcanvas-end bg-black text-white ms-lg-auto" tabindex="-1" id="menuPrincipal" data-bs-backdrop="false" data-bs-scroll="true" style="--bs-offcanvas-width: 260px;">
-        <header class="offcanvas-header">
-          <h2 class="offcanvas-title h5 title-red">La Cabañita</h2>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
-        </header>
-
-        <section class="offcanvas-body justify-content-end">
-          <ul class="navbar-nav ms-lg-auto text-center text-lg-end">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-            <li class="nav-item"><a class="nav-link nav-cart" href="carrito.html">Carrito</a></li>
-          </ul>
-        </section>
-      </aside>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero hero-home text-center text-white">
-      <section class="container">
-        <h1 class="display-4 fw-bold title-red">El verdadero sabor a la brasa en Bagua</h1>
-        <p class="lead text-light opacity-75">Ingredientes seleccionados, una receta única y atención toda la noche para calmar tus antojos.</p>
-        <nav class="hero-actions" aria-label="Acciones principales">
-          <a href="menu.html" class="btn btn-cabanita btn-lg">Ver Menú</a>
-          <a href="contactanos.html" class="btn btn-outline-light btn-lg">Ubícanos</a>
-        </nav>
-      </section>
-    </section>
-
-    <section class="container section-space">
-      <header class="text-center mb-5">
-        <h2 class="display-5 fw-bold title-red">Promociones Imperdibles</h2>
-        <p class="text-light opacity-75">Aprovecha los mejores combos para calmar el antojo nocturno.</p>
-      </header>
-
-      <section class="row g-4 justify-content-center">
-        <article class="col-12 col-md-6 col-lg-5">
-          <figure class="card product-card h-100 border-0 shadow-sm overflow-hidden text-center m-0">
-            <img src="./imagenes/COMBOFAMILIARNOCTURNO.png" class="card-img-top img-fluid" alt="Combo Familiar Nocturno">
-            <figcaption class="card-body">
-              <span class="badge bg-danger mb-2 fs-6">MÁS VENDIDO</span>
-              <h3 class="h4 card-title fw-bold">Combo Familiar Nocturno</h3>
-              <p class="card-text text-muted">1 pollo a la brasa, porción grande de papas, ensalada, gaseosa de 1.5L y todas nuestras cremas.</p>
-              <p class="h3 text-success fw-bold">S/. 49.90</p>
-              <a href="https://wa.me/51930838877" target="_blank" class="btn btn-cabanita w-100">Pedir Promo por WhatsApp</a>
-            </figcaption>
-          </figure>
-        </article>
-
-        <article class="col-12 col-md-6 col-lg-5">
-          <figure class="card product-card h-100 border-0 shadow-sm overflow-hidden text-center m-0">
-            <img src="./imagenes/DUOMONSTRITOCALLEJERO.png" class="card-img-top img-fluid" alt="Dúo Mostrito Callejero">
-            <figcaption class="card-body">
-              <span class="badge bg-warning text-dark mb-2 fs-6">SÓLO DELIVERY</span>
-              <h3 class="h4 card-title fw-bold">Dúo Mostrito Callejero</h3>
-              <p class="card-text text-muted">2 cuartos de pollo, 2 porciones de arroz chaufa amazónico y papas crujientes.</p>
-              <p class="h3 text-success fw-bold">S/. 28.00</p>
-              <a href="https://wa.me/51930838877" target="_blank" class="btn btn-cabanita w-100">Pedir Promo por WhatsApp</a>
-            </figcaption>
-          </figure>
-        </article>
-      </section>
-    </section>
-
-    <section class="section-dark section-space">
-      <section class="container">
-        <header class="text-center mb-5">
-          <h2 class="h1 fw-bold title-red">Los favoritos de la casa</h2>
-          <p class="text-light opacity-75">Los platos más pedidos por nuestra comunidad en Bagua.</p>
-        </header>
-
-        <section class="row g-4 justify-content-center">
-          <article class="col-12 col-md-6 col-lg-4">
-            <section class="card product-card h-100 shadow-sm">
-              <img src="./imagenes/POLLOALABRASACOMPLETO.png" class="card-img-top img-fluid" alt="Pollo a la Brasa Completo">
-              <section class="card-body text-center">
-                <h3 class="h5 card-title text-dark fw-bold">Pollo Entero a la Brasa</h3>
-                <p class="card-text text-muted small">Ideal para compartir en familia. Incluye papas crujientes, ensalada fresca y cremas.</p>
-                <a href="menu.html" class="btn btn-cabanita w-100">Pedir Ahora</a>
-              </section>
-            </section>
-          </article>
-
-          <article class="col-12 col-md-6 col-lg-4">
-            <section class="card product-card h-100 shadow-sm">
-              <img src="./imagenes/MONSTRITOCABAÑITA.png" class="card-img-top img-fluid" alt="Mostrito Cabañita">
-              <section class="card-body text-center">
-                <h3 class="h5 card-title text-dark fw-bold">El Mostrito Cabañita</h3>
-                <p class="card-text text-muted small">1/4 de pollo a la brasa acompañado de arroz chaufa de la casa.</p>
-                <a href="menu.html" class="btn btn-cabanita w-100">Pedir Ahora</a>
-              </section>
-            </section>
-          </article>
-        </section>
-      </section>
-    </section>
-
-    <section class="container section-space">
-  <header class="text-center mb-5">
-    <h2 class="h1 fw-bold title-red">¿Qué dicen nuestros clientes?</h2>
-    <p class="text-light opacity-75">Opiniones reales de la comunidad de Bagua.</p>
-  </header>
-
-  <section id="comentariosClientes" class="carousel slide mobile-carousel d-md-none" data-bs-ride="carousel" data-bs-touch="true" aria-label="Carrusel de comentarios de clientes">
-    <section class="carousel-indicators mobile-carousel-indicators">
-      <button type="button" data-bs-target="#comentariosClientes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Comentario 1"></button>
-      <button type="button" data-bs-target="#comentariosClientes" data-bs-slide-to="1" aria-label="Comentario 2"></button>
-      <button type="button" data-bs-target="#comentariosClientes" data-bs-slide-to="2" aria-label="Comentario 3"></button>
-    </section>
-
-    <section class="carousel-inner">
-      <article class="carousel-item active">
-        <blockquote class="card testimonial-card mobile-slide-card p-4 border-0 shadow-sm m-0">
-          <p class="card-text">"El mejor pollo a la brasa de todo Bagua. El sabor del ahumado al carbón es único y las cremas son buenísimas."</p>
-          <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-            Juan Carlos Mendoza <small class="d-block">Cliente frecuente</small>
-          </footer>
-        </blockquote>
-      </article>
-
-      <article class="carousel-item">
-        <blockquote class="card testimonial-card mobile-slide-card p-4 border-0 shadow-sm m-0">
-          <p class="card-text">"Me encanta que atiendan hasta tarde. Pasar por La Cabañita por un mostrito ya es tradición."</p>
-          <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-            Leyla Vásquez <small class="d-block">Estudiante</small>
-          </footer>
-        </blockquote>
-      </article>
-
-      <article class="carousel-item">
-        <blockquote class="card testimonial-card mobile-slide-card p-4 border-0 shadow-sm m-0">
-          <p class="card-text">"El delivery llega rápido y el pollo siempre llega calientito. Excelente atención por WhatsApp."</p>
-          <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-            David S. <small class="d-block">Vecino de Bagua</small>
-          </footer>
-        </blockquote>
-      </article>
-    </section>
-
-    <button class="carousel-control-prev mobile-carousel-control" type="button" data-bs-target="#comentariosClientes" data-bs-slide="prev" aria-label="Comentario anterior">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-
-    <button class="carousel-control-next mobile-carousel-control" type="button" data-bs-target="#comentariosClientes" data-bs-slide="next" aria-label="Comentario siguiente">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </section>
-
-  <section class="row g-4 d-none d-md-flex">
-    <article class="col-md-4">
-      <blockquote class="card testimonial-card h-100 p-4 border-0 shadow-sm m-0">
-        <p class="card-text">"El mejor pollo a la brasa de todo Bagua. El sabor del ahumado al carbón es único y las cremas son buenísimas."</p>
-        <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-          Juan Carlos Mendoza <small class="d-block">Cliente frecuente</small>
-        </footer>
-      </blockquote>
-    </article>
-
-    <article class="col-md-4">
-      <blockquote class="card testimonial-card h-100 p-4 border-0 shadow-sm m-0">
-        <p class="card-text">"Me encanta que atiendan hasta tarde. Pasar por La Cabañita por un mostrito ya es tradición."</p>
-        <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-          Leyla Vásquez <small class="d-block">Estudiante</small>
-        </footer>
-      </blockquote>
-    </article>
-
-    <article class="col-md-4">
-      <blockquote class="card testimonial-card h-100 p-4 border-0 shadow-sm m-0">
-        <p class="card-text">"El delivery llega rápido y el pollo siempre llega calientito. Excelente atención por WhatsApp."</p>
-        <footer class="blockquote-footer mt-3 bg-transparent border-0 p-0">
-          David S. <small class="d-block">Vecino de Bagua</small>
-        </footer>
-      </blockquote>
-    </article>
-  </section>
-</section>
-
-<section class="container section-space">
-  <header class="text-center mb-5">
-    <h2 class="display-5 title-red">¿Por qué elegir La Cabañita?</h2>
-    <p class="text-light opacity-75">Lo que nos hace el punto de encuentro favorito en la región.</p>
-  </header>
-
-  <section id="razonesCabanita" class="carousel slide mobile-carousel d-md-none" data-bs-ride="carousel" data-bs-touch="true" aria-label="Carrusel de razones para elegir La Cabañita">
-    <section class="carousel-indicators mobile-carousel-indicators">
-      <button type="button" data-bs-target="#razonesCabanita" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Razón 1"></button>
-      <button type="button" data-bs-target="#razonesCabanita" data-bs-slide-to="1" aria-label="Razón 2"></button>
-      <button type="button" data-bs-target="#razonesCabanita" data-bs-slide-to="2" aria-label="Razón 3"></button>
-    </section>
-
-    <section class="carousel-inner">
-      <article class="carousel-item active">
-        <section class="card benefit-card mobile-slide-card p-4 border-0 shadow-sm text-center">
-          <figure class="icon-circle mx-auto"><span>🔥</span></figure>
-          <h3 class="h4 fw-bold">Sabor Incomparable</h3>
-          <p class="text-white-50 mb-0">Pollo marinado con nuestra receta secreta y horneado al punto exacto del carbón.</p>
-        </section>
-      </article>
-
-      <article class="carousel-item">
-        <section class="card benefit-card mobile-slide-card p-4 border-0 shadow-sm text-center">
-          <figure class="icon-circle mx-auto"><span>🛵</span></figure>
-          <h3 class="h4 fw-bold">Delivery Rápido</h3>
-          <p class="text-white-50 mb-0">Tu pedido caliente y con todas tus cremas favoritas directo a la puerta de tu casa.</p>
-        </section>
-      </article>
-
-      <article class="carousel-item">
-        <section class="card benefit-card mobile-slide-card p-4 border-0 shadow-sm text-center">
-          <figure class="icon-circle mx-auto"><span>🌙</span></figure>
-          <h3 class="h4 fw-bold">Horario Nocturno</h3>
-          <p class="text-white-50 mb-0">¿Hambre a altas horas? Estamos listos para atenderte durante la noche.</p>
-        </section>
-      </article>
-    </section>
-
-    <button class="carousel-control-prev mobile-carousel-control" type="button" data-bs-target="#razonesCabanita" data-bs-slide="prev" aria-label="Razón anterior">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-
-    <button class="carousel-control-next mobile-carousel-control" type="button" data-bs-target="#razonesCabanita" data-bs-slide="next" aria-label="Razón siguiente">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </section>
-
-  <section class="row g-4 text-center d-none d-md-flex">
-    <article class="col-md-4">
-      <section class="card benefit-card h-100 p-4 border-0 shadow-sm">
-        <figure class="icon-circle mx-auto"><span>🔥</span></figure>
-        <h3 class="h4 fw-bold">Sabor Incomparable</h3>
-        <p class="text-white-50">Pollo marinado con nuestra receta secreta y horneado al punto exacto del carbón.</p>
-      </section>
-    </article>
-
-    <article class="col-md-4">
-      <section class="card benefit-card h-100 p-4 border-0 shadow-sm">
-        <figure class="icon-circle mx-auto"><span>🛵</span></figure>
-        <h3 class="h4 fw-bold">Delivery Rápido</h3>
-        <p class="text-white-50">Tu pedido caliente y con todas tus cremas favoritas directo a la puerta de tu casa.</p>
-      </section>
-    </article>
-
-    <article class="col-md-4">
-      <section class="card benefit-card h-100 p-4 border-0 shadow-sm">
-        <figure class="icon-circle mx-auto"><span>🌙</span></figure>
-        <h3 class="h4 fw-bold">Horario Nocturno</h3>
-        <p class="text-white-50">¿Hambre a altas horas? Estamos listos para atenderte durante la noche.</p>
-      </section>
-    </article>
-  </section>
-</section>
-  </main>
-
-  <footer class="footer py-5 text-white-50">
-    <section class="container">
-      <section class="row g-4">
-        <aside class="col-12 col-md-4">
-          <section class="footer-brand mb-3">
-            <img src="./imagenes/LOGOBNPOS.png" alt="Logo Blanco" class="footer-logo">
-            <header>
-              <span class="text-white d-block small">POLLERÍA</span>
-              <span class="text-white d-block small">LA CABAÑITA</span>
-            </header>
-          </section>
-          <p class="small">El mejor pollo a la brasa de Bagua, disponible toda la noche. Calidad, sabor y servicio excepcional.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Pollería La Cabañita en Bagua: pollo a la brasa, parrillas, combos y delivery."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="icon" type="image/png" sizes="512x512" href="imagenes/favicon-cabanita.png" />
+        <link rel="apple-touch-icon" href="imagenes/favicon-cabanita.png" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Pollería La Cabañita | Inicio</title>
+    </head>
+    <body>
+        <aside id="pageLoader" class="page-loader" aria-hidden="true" aria-label="Cargando página">
+            <figure class="loader-content">
+                <img
+                    src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                    alt=""
+                    class="loader-logo"
+                />
+                <span class="loader-ring" aria-hidden="true"></span>
+                <figcaption>Preparando tu experiencia...</figcaption>
+            </figure>
         </aside>
-
-        <section class="col-12 col-md-4">
-          <h4 class="h5 text-white mb-3">Contáctanos</h4>
-          <ul class="list-unstyled small">
-            <li class="mb-2">📍 Av. Héroes del Cenepa 1435, Bagua</li>
-            <li class="mb-2">📞 +51 988 714 324</li>
-            <li class="mb-2">🕒 Abierto a partir de las 5 p.m.</li>
-          </ul>
-        </section>
-
-        <section class="col-12 col-md-4">
-          <h4 class="h5 text-white mb-3">Síguenos</h4>
-          <nav class="social-nav" aria-label="Redes sociales">
-            <a href="https://wa.me/51930838877" target="_blank" class="social-icon-circle" title="WhatsApp">W</a>
-            <a href="https://www.instagram.com/polleria_la_cabanita/" target="_blank" class="social-icon-circle" title="Instagram">I</a>
-            <a href="https://web.facebook.com/" target="_blank" class="social-icon-circle" title="Facebook">F</a>
-            <a href="https://www.tiktok.com/" target="_blank" class="social-icon-circle" title="TikTok">T</a>
-          </nav>
-        </section>
-      </section>
-
-      <hr class="border-secondary my-4">
-      <p class="text-center small text-white-50 mb-0">&copy; 2026 Pollería La Cabañita Bagua. Todos los derechos reservados.</p>
-    </section>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="app.js"></script>
-</body>
+        <header class="site-header sticky-top">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark container-fluid py-2"
+                aria-label="Navegación principal"
+            >
+                <a class="navbar-brand brand" href="index.html">
+                    <img
+                        src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                        alt="Logo de Pollería La Cabañita"
+                    /><span class="brand-name" aria-label="Pollería La Cabañita"><span>POLLERÍA</span><span>LA CABAÑITA</span></span>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <section class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactanos.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrito.html"
+                                >Carrito
+                                <span id="cartCount" class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </header>
+        <main>
+            <section class="hero hero-home">
+                <article class="container-fluid hero-content">
+                    <span class="eyebrow">Tradición y sabor</span>
+                    <h1>El verdadero sabor a la brasa en Bagua</h1>
+                    <p>Ingredientes seleccionados, receta única y atención toda la noche.</p>
+                    <nav class="d-flex flex-wrap gap-3" aria-label="Acciones principales">
+                        <a class="btn btn-brand" href="menu.html">Ver menú</a>
+                        <a class="btn btn-outline-light" href="contactanos.html">Ubícanos</a>
+                    </nav>
+                </article>
+            </section>
+            <section class="section">
+                <article class="container-fluid">
+                    <header class="section-title">
+                        <span>Conoce nuestra propuesta</span>
+                        <h2>Una experiencia para compartir</h2>
+                    </header>
+                    <section
+                        id="galeriaInicio"
+                        class="carousel slide gallery"
+                        data-bs-ride="carousel"
+                        aria-label="Galería de La Cabañita"
+                    >
+                        <nav class="carousel-indicators">
+                            <button
+                                type="button"
+                                data-bs-target="#galeriaInicio"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-current="true"
+                                aria-label="Imagen 1"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#galeriaInicio"
+                                data-bs-slide-to="1"
+                                aria-label="Imagen 2"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#galeriaInicio"
+                                data-bs-slide-to="2"
+                                aria-label="Imagen 3"
+                            ></button>
+                        </nav>
+                        <section class="carousel-inner">
+                            <figure class="carousel-item active">
+                                <img
+                                    src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/FONDOINDEX.png"
+                                    class="d-block w-100"
+                                    alt="Pollo a la brasa"
+                                />
+                                <figcaption class="carousel-caption">
+                                    <h3>Sabor tradicional</h3>
+                                    <p>Preparado al carbón y servido al momento.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="carousel-item">
+                                <img
+                                    src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/COMBOFAMILIARNOCTURNO.png"
+                                    class="d-block w-100"
+                                    alt="Combo familiar"
+                                />
+                                <figcaption class="carousel-caption">
+                                    <h3>Combos para compartir</h3>
+                                    <p>Opciones completas para toda la familia.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="carousel-item">
+                                <img
+                                    src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/INTERIOR.jpeg"
+                                    class="d-block w-100"
+                                    alt="Interior del local"
+                                />
+                                <figcaption class="carousel-caption">
+                                    <h3>Te esperamos</h3>
+                                    <p>Un espacio cálido para disfrutar juntos.</p>
+                                </figcaption>
+                            </figure>
+                        </section>
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#galeriaInicio"
+                            data-bs-slide="prev"
+                            aria-label="Anterior"
+                        >
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#galeriaInicio"
+                            data-bs-slide="next"
+                            aria-label="Siguiente"
+                        >
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </section>
+                </article>
+            </section>
+            <section class="section section-soft">
+                <article class="container-fluid">
+                    <header class="section-title">
+                        <span>Favoritos</span>
+                        <h2>Los más pedidos</h2>
+                    </header>
+                    <section class="row g-4 justify-content-between promo-grid">
+                        <article class="col-12 col-lg-5 promo-column">
+                            <section class="promo-card">
+                                <figure>
+                                    <img
+                                        src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/COMBOFAMILIARNOCTURNO.png"
+                                        alt="Combo familiar"
+                                    />
+                                </figure>
+                                <section class="promo-body">
+                                    <span class="tag">Más vendido</span>
+                                    <h3>Combo Familiar Nocturno</h3>
+                                    <p>Pollo entero, papas, ensalada, gaseosa y cremas.</p>
+                                    <strong>S/ 49.90</strong>
+                                    <a class="btn btn-brand" href="menu.html?categoria=combos"
+                                        >Pedir ahora</a
+                                    >
+                                </section>
+                            </section>
+                        </article>
+                        <article class="col-12 col-lg-5 promo-column">
+                            <section class="promo-card">
+                                <figure>
+                                    <img
+                                        src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/DUOMONSTRITOCALLEJERO.png"
+                                        alt="Dúo mostrito"
+                                    />
+                                </figure>
+                                <section class="promo-body">
+                                    <span class="tag">Delivery</span>
+                                    <h3>Dúo Mostrito Callejero</h3>
+                                    <p>Dos cuartos de pollo con chaufa y papas.</p>
+                                    <strong>S/ 28.00</strong>
+                                    <a class="btn btn-brand" href="menu.html?categoria=combos"
+                                        >Pedir ahora</a
+                                    >
+                                </section>
+                            </section>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <section class="section">
+                <article class="container-fluid">
+                    <header class="section-title">
+                        <span>Opiniones reales</span>
+                        <h2>¿Qué dicen nuestros clientes?</h2>
+                    </header>
+                    <section class="reviews-summary" aria-label="Promedio de calificaciones">
+                        <article class="reviews-average-card">
+                            <p id="promedioNumero" class="reviews-average-number">0.0</p>
+                            <section>
+                                <p
+                                    id="promedioEstrellas"
+                                    class="reviews-average-stars"
+                                    aria-label="Promedio de estrellas"
+                                >
+                                    ☆☆☆☆☆
+                                </p>
+                                <p id="promedioTexto" class="reviews-average-text">
+                                    Sin calificaciones todavía
+                                </p>
+                            </section>
+                        </article>
+                    </section>
+                    <section
+                        id="opinionesCarousel"
+                        class="carousel slide reviews-carousel"
+                        data-bs-touch="true"
+                    >
+                        <nav
+                            id="indicadoresOpiniones"
+                            class="carousel-indicators review-indicators"
+                        ></nav>
+                        <section id="listaOpiniones" class="carousel-inner"></section>
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#opinionesCarousel"
+                            data-bs-slide="prev"
+                        >
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#opinionesCarousel"
+                            data-bs-slide="next"
+                        >
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </section>
+                    <article class="review-form mt-5">
+                        <h3>Déjanos tu opinión</h3>
+                        <form id="formOpinion" novalidate>
+                            <fieldset class="row g-3">
+                                <legend class="visually-hidden">Formulario de opinión</legend>
+                                <label class="col-md-6 form-label" for="nombreOpinion"
+                                    >Nombre
+                                    <input
+                                        class="form-control mt-2"
+                                        id="nombreOpinion"
+                                        maxlength="50"
+                                        required
+                                    />
+                                </label>
+                                <fieldset class="col-md-6">
+                                    <legend class="form-label">Calificación</legend>
+                                    <section
+                                        id="selectorEstrellas"
+                                        class="star-selector"
+                                        role="radiogroup"
+                                        aria-label="Calificación"
+                                    >
+                                        <button type="button" data-rating="1">★</button>
+                                        <button type="button" data-rating="2">★</button>
+                                        <button type="button" data-rating="3">★</button>
+                                        <button type="button" data-rating="4">★</button>
+                                        <button type="button" data-rating="5">★</button>
+                                    </section>
+                                </fieldset>
+                                <label class="col-12 form-label" for="comentarioOpinion"
+                                    >Comentario<textarea
+                                        class="form-control mt-2"
+                                        id="comentarioOpinion"
+                                        rows="4"
+                                        minlength="10"
+                                        maxlength="300"
+                                        required
+                                    ></textarea>
+                                </label>
+                                <footer class="col-12">
+                                    <button class="btn btn-brand" type="submit">
+                                        Publicar opinión
+                                    </button>
+                                    <p id="mensajeOpinion" class="mt-3 mb-0" aria-live="polite"></p>
+                                </footer>
+                            </fieldset>
+                        </form>
+                    </article>
+                </article>
+            </section>
+            <section class="section home-benefits">
+                <article class="container-fluid">
+                    <section class="row g-4 text-center">
+                        <article class="col-md-4">
+                            <i class="bi bi-fire feature-icon"></i>
+                            <h3>Sabor incomparable</h3>
+                            <p>Receta propia y cocción al carbón.</p>
+                        </article>
+                        <article class="col-md-4">
+                            <i class="bi bi-scooter feature-icon"></i>
+                            <h3>Delivery rápido</h3>
+                            <p>Tu pedido caliente hasta tu puerta.</p>
+                        </article>
+                        <article class="col-md-4">
+                            <i class="bi bi-moon-stars feature-icon"></i>
+                            <h3>Horario nocturno</h3>
+                            <p>Atendemos tus antojos desde las 5 p. m.</p>
+                        </article>
+                    </section>
+                </article>
+            </section>
+        </main>
+        <aside class="floating-tools" aria-label="Herramientas de visualización">
+            <button
+                id="themeToggle"
+                class="floating-button theme-toggle"
+                type="button"
+                aria-label="Activar modo nocturno"
+                title="Cambiar tema"
+            >
+                <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            </button>
+            <button
+                id="backToTop"
+                class="floating-button back-to-top"
+                type="button"
+                aria-label="Volver al inicio"
+                title="Volver arriba"
+            >
+                <i class="bi bi-arrow-up" aria-hidden="true"></i>
+            </button>
+        </aside>
+        <footer class="site-footer">
+            <section class="container-fluid py-5">
+                <section class="row g-4 align-items-start">
+                    <article class="col-lg-5 footer-brand">
+                        <img
+                            src="https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/LOGOBNPOS.png"
+                            alt="Logo La Cabañita"
+                        />
+                        <header>
+                            <h2 class="footer-brand-name"><span>POLLERÍA</span><span>LA CABAÑITA</span></h2>
+                        </header>
+                    </article>
+                    <address class="col-12 col-md-6 col-lg-3">
+                        <h3>Contáctanos</h3>
+                        <p>Av. Héroes del Cenepa 1466, Bagua 01721</p>
+                        <p><a href="tel:+51988714324">+51 988 714 324</a></p>
+                        <p>Desde las 5:00 p. m.</p>
+                    </address>
+                    <nav class="col-12 col-md-6 col-lg-4" aria-label="Redes sociales">
+                        <h3>Síguenos</h3>
+                        <ul class="social-links list-unstyled">
+                            <li>
+                                <a
+                                    href="https://wa.me/51988714324"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="WhatsApp"
+                                >
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/polleria_la_cabanita/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                    ><i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://web.facebook.com/profile.php?id=100043336046885" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@pollerialacabanita?lang=es-419" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                    <i class="bi bi-tiktok"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <hr />
+                <p class="mb-0 text-center">
+                    © 2026 Pollería La Cabañita. Todos los derechos reservados.
+                </p>
+            </section>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/opiniones.js"></script>
+    </body>
 </html>
