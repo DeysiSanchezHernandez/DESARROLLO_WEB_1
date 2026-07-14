@@ -59,3 +59,53 @@
         "destacado": true,
         "costoEnvase": 0.5
     },
+        {
+        "id": "mostrito",
+        "nombre": "Mostrito Cabañita",
+        "descripcion": "Un cuarto de pollo acompañado de arroz chaufa de la casa.",
+        "precio": 18.0,
+        "categoria": "combos",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/MONSTRITOCABAÑITA.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "parrilla-pollo",
+        "nombre": "Parrillada de Pollo",
+        "descripcion": "Papa, camote, choclo, ensalada y cremas.",
+        "precio": 19.0,
+        "categoria": "parrillas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PARRILLAPOLLO.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "parrilla-carne",
+        "nombre": "Parrillada de Carne",
+        "descripcion": "Papa, camote, choclo, ensalada y cremas.",
+        "precio": 22.0,
+        "categoria": "parrillas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PARRILLACARNE.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "parrilla-cerdo",
+        "nombre": "Parrillada de Cerdo",
+        "descripcion": "Papa, camote, choclo, ensalada y cremas.",
+        "precio": 22.0,
+        "categoria": "parrillas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PARRILLACERDO.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "parrilla-mixta",
+        "nombre": "Parrillada Mixta",
+        "descripcion": "Carnes variadas con papa, camote, choclo, ensalada y cremas.",
+        "precio": 29.0,
+        "categoria": "parrillas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PARRILLAMIXTA.png",
+        "destacado": true,
+        "costoEnvase": 0.5
+    },
