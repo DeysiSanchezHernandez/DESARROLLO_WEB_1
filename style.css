@@ -1235,3 +1235,133 @@ body {
     transform: translateY(0);
     pointer-events: auto;
 }
+
+/* =========================================================
+   MODO NOCTURNO
+========================================================= */
+body,
+.site-header,
+.site-footer,
+.section,
+.product-card,
+.promo-card,
+.review-card,
+.review-form,
+.value-card,
+.team-card,
+.contact-panel,
+.checkout-column,
+.cart-item,
+.form-control,
+.form-select,
+.accordion-item,
+.accordion-button {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body.dark-theme {
+    --crema: #171111;
+    --gris: #2b2323;
+    --blanco: #201818;
+    color: #f7efea;
+    background: #171111;
+}
+
+body.dark-theme .section-soft,
+body.dark-theme .faq-section,
+body.dark-theme .home-benefits,
+body.dark-theme .values-section,
+body.dark-theme .contact-section {
+    background: #171111 !important;
+}
+
+body.dark-theme .product-card,
+body.dark-theme .promo-card,
+body.dark-theme .review-card,
+body.dark-theme .review-form,
+body.dark-theme .value-card,
+body.dark-theme .team-card,
+body.dark-theme .checkout-column,
+body.dark-theme .cart-item,
+body.dark-theme .accordion-item,
+body.dark-theme .contact-card {
+    color: #f7efea;
+    background: #241b1b;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme label,
+body.dark-theme legend,
+body.dark-theme .card-text,
+body.dark-theme .product-price,
+body.dark-theme .cart-line-total {
+    color: inherit;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select,
+body.dark-theme textarea {
+    color: #fff;
+    background-color: #181212;
+    border-color: #4d3a3a;
+}
+
+body.dark-theme .form-control::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #bbaaaa;
+}
+
+body.dark-theme .form-select {
+    color-scheme: dark;
+}
+
+body.dark-theme .cart-summary,
+body.dark-theme .cash-fields,
+body.dark-theme .delivery-fields {
+    color: #f7efea;
+    background: #181212;
+    border-color: #554040;
+}
+
+body.dark-theme .accordion-button {
+    color: #f7efea;
+    background: #241b1b;
+}
+
+body.dark-theme .accordion-button.collapsed::after {
+    filter: invert(1);
+}
+
+body.dark-theme .table,
+body.dark-theme .result-count {
+    color: #f7efea;
+}
+
+body.dark-theme .theme-toggle {
+    color: var(--vino);
+    background: var(--dorado);
+}
+
+@media (max-width: 575.98px) {
+    .floating-tools {
+        right: 0.85rem;
+        bottom: 0.85rem;
+    }
+
+    .floating-button {
+        width: 44px;
+        height: 44px;
+    }
+}
