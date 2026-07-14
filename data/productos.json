@@ -109,3 +109,83 @@
         "destacado": true,
         "costoEnvase": 0.5
     },
+    {
+        "id": "papa-clasica",
+        "nombre": "Papas fritas",
+        "descripcion": "Crujientes papas fritas de corte clásico.",
+        "precio": 8.0,
+        "categoria": "papas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PAPAFRITA.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "papa-crinkle",
+        "nombre": "Papas fritas Crinkle",
+        "descripcion": "Crujientes papas fritas de corte ondulado.",
+        "precio": 10.0,
+        "categoria": "papas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PAPAFRITACRINKLE.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "papa-waffle",
+        "nombre": "Papas fritas Waffle",
+        "descripcion": "Crujientes papas fritas de corte waffle.",
+        "precio": 12.0,
+        "categoria": "papas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PAPAFRITAWAFFLE.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "papa-curly",
+        "nombre": "Papas fritas Curly",
+        "descripcion": "Crujientes papas fritas de corte espiral.",
+        "precio": 15.0,
+        "categoria": "papas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/PAPAFRITACURLY.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "ensalada-cesar",
+        "nombre": "Ensalada César",
+        "descripcion": "Ensalada César con el toque especial de la casa.",
+        "precio": 9.0,
+        "categoria": "ensaladas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/ENSALADACESAR.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "ensalada-greek",
+        "nombre": "Ensalada Greek",
+        "descripcion": "Ensalada fresca de inspiración griega.",
+        "precio": 9.0,
+        "categoria": "ensaladas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/ENSALADAGREEK.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "ensalada-kosambari",
+        "nombre": "Ensalada Kosambari",
+        "descripcion": "Ensalada fresca con inspiración india.",
+        "precio": 9.0,
+        "categoria": "ensaladas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/ENSALADAKOSAMBARI.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
+    {
+        "id": "ensalada-caprese",
+        "nombre": "Ensalada Caprese",
+        "descripcion": "Ensalada italiana con tomate y queso.",
+        "precio": 9.0,
+        "categoria": "ensaladas",
+        "imagen": "https://raw.githubusercontent.com/DeysiSanchezHernandez/DESARROLLO_WEB_1/main/imagenes/ENSALADACAPRESE.png",
+        "destacado": false,
+        "costoEnvase": 0.5
+    },
