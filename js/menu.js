@@ -129,3 +129,25 @@ function createProductCard(product) {
         </article>
     `;
 }
+
+function slug(value) {
+    return value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-");
+}
+
+function escapeHTML(value) {
+    return String(value).replace(
+        /[&<>"']/g,
+        (character) =>
+            ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;",
+            })[character],
+    );
+}
