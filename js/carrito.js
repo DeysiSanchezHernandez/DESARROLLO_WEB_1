@@ -299,3 +299,19 @@ function sendWhatsapp(event) {
 
     window.open(`https://wa.me/51988714324?text=${encodeURIComponent(text)}`, "_blank", "noopener");
 }
+
+
+
+function calculateContainers(cart) {
+    return cart.reduce((total, item) => {
+        const product = catalog.find((candidate) => candidate.id === item.id);
+
+        if (!product) {
+            return total;
+        }
+
+        const containerCost = Number(product.costoEnvase ?? 0);
+
+        return total + containerCost * item.cantidad;
+    }, 0);
+}
