@@ -315,3 +315,18 @@ function calculateContainers(cart) {
         return total + containerCost * item.cantidad;
     }, 0);
 }
+
+
+function escapeHTML(value) {
+    return String(value).replace(
+        /[&<>"']/g,
+        (character) =>
+            ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;",
+            })[character],
+    );
+}
